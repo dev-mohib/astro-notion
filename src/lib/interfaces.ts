@@ -1,7 +1,7 @@
 export interface Database {
   Title: string
   Description: string
-  Icon: FileObject | Emoji | null
+  Icon: Emoji | FileObject | null
   Cover: FileObject | null
 }
 

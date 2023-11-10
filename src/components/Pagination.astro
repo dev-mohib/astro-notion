@@ -2,9 +2,9 @@
 import { getPageLink } from '../lib/blog-helpers.ts'
 
 export interface Props {
-  currentPage: number
-  numberOfPages: number
-  tag: string
+  currentPage?: number
+  numberOfPages?: number
+  tag ? : string
 }
 
 const { currentPage, numberOfPages, tag = '' } = Astro.props

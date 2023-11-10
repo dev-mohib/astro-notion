@@ -1,10 +1,10 @@
 ---
-import { Post } from '../lib/interfaces.ts'
+import type { Post } from '../lib/interfaces.ts'
 import { getPostLink } from '../lib/blog-helpers.ts'
 
 export interface Props {
-  post: Post
-  enableLink: boolean
+  post?: Post
+  enableLink?: boolean
 }
 
 const { post, enableLink = true } = Astro.props
