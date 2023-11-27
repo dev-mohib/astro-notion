@@ -1,0 +1,59 @@
+---
+import StaticWebsite from "@components/icons/static-website.astro";
+import FullStack from "@components/icons/full-stack.astro";
+import AWS from "@components/icons/aws.astro"
+import BaasPlatform from "@components/icons/baas-platform.astro";
+import ContainerService from "@components/icons/container-service.astro";
+import Terraform from "@components/icons/terraform.astro";
+---
+
+<div class="grid grid-cols-8 gap-5 sm:px-0 px-10 ">
+    <div class="sm:col-start-2 col-span-full sm:col-end-4 [&_svg]:h-10 [&_svg]:fill-primary bg-base-200 rounded-lg px-2 py-5">
+        <StaticWebsite />
+        <h1 class="font-inter pt-2 text-lg">Static Website</h1>
+        <div class="h-28">
+            <p class="text-[1em] text-base-100">Static websites are fixed web pages with unchanging content, coded in HTML and CSS, suitable for fast loading and easy hosting.</p>
+        </div>
+        <a href="#" class="pb-3 text-primary">Static Website &#8594;</a>
+    </div>
+    <div class="sm:col-start-4 col-span-full sm:col-end-6 [&_svg]:h-10 [&_svg]:fill-primary bg-base-200 rounded-lg px-2 py-5">
+        <FullStack />
+        <h1 class="font-inter pt-2 text-lg">Web Application</h1>
+        <div class="h-28">
+            <p class="text-[1em] text-base-100">A web application is an interactive software accessed via browsers, offering dynamic functionalities for seamless user interaction and task completion.</p>
+        </div>
+        <a href="#" class="pb-3 text-primary">Web Application &#8594;</a>
+    </div>
+    <div class="sm:col-start-6 col-span-full sm:col-end-8 [&_svg]:h-10 [&_svg]:fill-primary bg-base-200 rounded-lg px-2 py-5">
+        <AWS />
+        <h1 class="font-inter pt-2 text-lg">AWS Architecture</h1>
+        <div class="h-28">
+            <p class="text-[1em] text-base-100">Amazon Web Services (AWS) is a cloud computing platform, offering a wide array of services for scalable, secure, and flexible infrastructure solutions.</p>
+        </div>
+        <a href="#" class="pb-3 text-primary">AWS &#8594;</a>
+    </div>
+    <div class="sm:col-start-2 col-span-full sm:col-end-4 [&_svg]:h-10 [&_svg]:fill-primary bg-base-200 rounded-lg px-2 py-5">
+        <BaasPlatform />
+        <h1 class="font-inter pt-2 text-lg">BaaS</h1>
+        <div class="h-28">
+            <p class="text-[1em] text-base-100">Backend as a Service (BaaS) simplifies backend development by outsourcing server-side tasks, allowing developers to focus on frontend logic.</p>
+        </div>
+        <a href="#" class="pb-3 text-primary">BaaS &#8594;</a>
+    </div>
+    <div class="sm:col-start-4 col-span-full sm:col-end-6 [&_svg]:h-10 [&_svg]:fill-primary bg-base-200 rounded-lg px-2 py-5">
+        <ContainerService />
+        <h1 class="font-inter pt-2 text-lg">Containerization</h1>
+        <div class="h-28">
+            <p class="text-[1em] text-base-100">Containerization, exemplified by Docker, simplifies software deployment, ensuring consistency across diverse environments, fostering scalability.</p>
+        </div>
+        <a href="#" class="pb-3 text-primary">Containerization &#8594;</a>
+    </div>
+    <div class="sm:col-start-6 col-span-full sm:col-end-8 [&_svg]:h-10 [&_svg]:fill-primary bg-base-200 rounded-lg px-2 py-5">
+        <Terraform />
+        <h1 class="font-inter pt-2 text-lg">Elastic Stack</h1>
+        <div class="h-28">
+            <p class="text-[1em] text-base-100">The Elastic Stack, or ELK Stack, encompasses Elasticsearch, Logstash, and Kibana, offering robust tools for log analysis, search, and visualization.</p>
+        </div>
+        <a href="#" class="pb-3 text-primary">Elastic Stack &#8594;</a>
+    </div>
+</div>

@@ -8,7 +8,7 @@ export interface Database {
 export interface Post {
   PageId: string
   Title: string
-  Icon: FileObject | Emoji | null
+  Icon?: FileObject | Emoji
   Cover: FileObject | null
   Slug: string
   Date: string
@@ -29,6 +29,7 @@ export interface Block {
   Heading3?: Heading3
   BulletedListItem?: BulletedListItem
   NumberedListItem?: NumberedListItem
+  ListItems? : Block[] | any
   ToDo?: ToDo
   Image?: Image
   File?: File

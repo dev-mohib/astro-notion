@@ -13,9 +13,8 @@ import 'prismjs/components/prism-ruby'
 import 'prismjs/components/prism-sql'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-yaml'
-import * as interfaces from '../../lib/notion/interfaces'
 import Caption from './Caption.astro'
-
+import * as interfaces from "@lib/interfaces"
 export interface Props {
   block: interfaces.Block
 }
@@ -57,13 +56,13 @@ const grammer =
 </script>
 
 <script>
+  // @ts-nocheck
   document.querySelectorAll('button.copy').forEach((button) => {
     button.addEventListener('click', (ev) => {
       navigator.clipboard
         .writeText(ev.target.getAttribute('data-code'))
         .then(() => {
           const originalText = ev.target.innerText
-
           ev.target.innerText = ev.target.getAttribute('data-done-text')
 
           setTimeout(() => {

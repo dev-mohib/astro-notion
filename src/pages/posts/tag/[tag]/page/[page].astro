@@ -1,24 +1,24 @@
 ---
-import type { SelectProperty } from '../../../../../lib/interfaces.ts'
+import type { SelectProperty } from '@lib/interfaces.ts'
 import {
   getPostsByTagAndPage,
   getRankedPosts,
   getAllTags,
   getNumberOfPagesByTag,
-} from '../../../../../lib/notion/client.ts'
-import Layout from '../../../../../layouts/Layout.astro'
-import NoContents from '../../../../../components/NoContents.astro'
-import PostDate from '../../../../../components/PostDate.astro'
-import PostTags from '../../../../../components/PostTags.astro'
-import PostTitle from '../../../../../components/PostTitle.astro'
-import PostFeaturedImage from '../../../../../components/PostFeaturedImage.astro'
-import PostExcerpt from '../../../../../components/PostExcerpt.astro'
-import ReadMoreLink from '../../../../../components/ReadMoreLink.astro'
-import Pagination from '../../../../../components/Pagination.astro'
-import BlogPostsLink from '../../../../../components/BlogPostsLink.astro'
-import BlogTagsLink from '../../../../../components/BlogTagsLink.astro'
-import styles from '../../../../../styles/blog.module.css'
-import '../../../../../styles/notion-color.css'
+} from '@lib/notion/client.ts'
+import Layout from '@layouts/Layout.astro'
+import NoContents from '@components/notion/NoContents.astro'
+import PostDate from '@pages/posts/components/PostDate.astro'
+import PostTags from '@pages/posts/components/PostTags.astro'
+import PostTitle from '@pages/posts/components/PostTitle.astro'
+import PostFeaturedImage from '@/components/notion/PostFeaturedImage.astro'
+import PostExcerpt from '@/components/notion/PostExcerpt.astro'
+import ReadMoreLink from '@/components/notion/ReadMoreLink.astro'
+import Pagination from '@/components/notion/Pagination.astro'
+import BlogPostsLink from '@pages/posts/components/BlogPostsLink.astro'
+import BlogTagsLink from '@pages/posts/components/BlogTagsLink.astro'
+import styles from '@styles/blog.module.css'
+import '@styles/notion-color.css'
 
 export async function getStaticPaths() {
   const allTags = await getAllTags()
@@ -67,7 +67,7 @@ const currentTag = posts[0].Tags.find((t) => t.name === tag)
         <NoContents contents={posts} />
       ) : (
         posts.map((post) => (
-          <div class={styles.post} key={post.Slug}>
+          <div class={styles.post}>
             <PostDate post={post} />
             <PostTags post={post} />
             <PostTitle post={post} />

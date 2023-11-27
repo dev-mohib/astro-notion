@@ -12,6 +12,7 @@ function withOpacity(variableName) {
 	secondary:  withOpacity("--color-secondary"),
 	base: withOpacity("--color-base"),
 	"base-100": withOpacity("--color-base-100"),
+	"base-200": withOpacity("--color-base-200"),
 	accent: withOpacity("--color-accent"),
 	"base-invert": withOpacity("--color-base-invert") 
   }

@@ -1,0 +1,78 @@
+---
+import Hero from "./Hero.astro";
+---
+  <div class="vertical-scroll-wrapper overscroll-x-none">
+    <div class="scroll-section speed1 bg-red-700">
+      <div class="hero-section">
+        <h1>Hero</h1>
+        <p>This is Hero section</p>
+      </div>
+    </div>
+  
+    <div class="scroll-section speed2 bg-green-600">
+      <div class="hero-section">
+        <h1>How Section</h1>
+        <p>This is Hero section</p>
+      </div>
+    </div>
+    
+    <div class="scroll-section speed3 bg-blue-700">
+      <div class="hero-section">
+        <h1>Tech Section</h1>
+        <p>This is Hero section</p>
+      </div>
+    </div>
+  </div>
+
+<style>
+  .vertical-scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    height: 100vh;
+    background-color: teal;
+    padding-bottom: 10rem;
+    perspective: 500px;
+      /* transform-style: preserve-3d; */
+  }
+  .scroll-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    min-height: 60vh; 
+    transition: 0.5s;
+    /* margin-top: 100px; */
+    
+  }
+  .speed1 {
+    transform: translate3d(0px, 0px, 100px);
+  }
+  .speed2 {
+    /* transform: translateZ(-.25px); */
+    transform: translate3d(0px, 0px, 250px);
+  }
+  .speed3 {
+    transform: translate3d(0px, 0px, 280px);
+  }
+  
+  .speed4 {
+    transform: translate3d(0px, 0px, 300px);
+  }
+  .speed5 {
+    transform: translate3d(0px, 0px, 330px);
+  }
+  .speed6 {
+    transform: translate3d(0px, 0px, ,360px);
+  }
+  
+  .hero-section{
+  display: grid;
+  place-items: center;
+  place-content: center;
+  background-color:red;
+}   
+  </style>

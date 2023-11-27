@@ -1,13 +1,16 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": "/home/mohib/projects/portfolio/astro-notion/src",
+    "baseUrl": "./src/",
     "types": ["vite/client"],
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "paths": {
       "@assets/*": [
         "assets/*"
+      ],
+      "@/*" : [
+        "*"
       ],
       "@config": [
         "config.ts"
@@ -29,6 +32,9 @@
       ],
       "@utils/*": [
         "utils/*"
+      ],
+      "@lib/*": [
+        "lib/*"
       ]
     },
     "jsxImportSource": "react"

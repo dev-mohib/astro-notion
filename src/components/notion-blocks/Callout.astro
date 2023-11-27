@@ -1,8 +1,8 @@
 ---
-import * as interfaces from '../../lib/interfaces.ts'
-import { snakeToKebab } from '../../lib/style-helpers.ts'
+import * as interfaces from '@lib/interfaces.ts'
+import { snakeToKebab } from '@lib/style-helpers.ts'
 import RichText from './RichText.astro'
-import NotionBlocks from '../NotionBlocks.astro'
+import NotionBlocks from '@components/notion/NotionBlocks.astro'
 
 export interface Props {
   block: interfaces.Block

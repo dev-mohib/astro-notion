@@ -1,0 +1,24 @@
+---
+import { filePath } from '@/lib/blog-helpers'
+import type { Post } from '@/lib/interfaces'
+export interface Props {
+  post: Post
+  classList : string
+}
+
+const { post, classList } = Astro.props
+let image = ''
+if (post.FeaturedImage && post.FeaturedImage.Url) {
+  if (import.meta.env.DEV) {
+    image = post.FeaturedImage.Url
+  } else {
+    image = filePath(new URL(post.FeaturedImage.Url))
+  }
+}
+return image
+
+---
+<div>
+  <img src={image} alt="Featured image of the post" class={classList} />
+</div>
+

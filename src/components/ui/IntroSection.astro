@@ -1,0 +1,160 @@
+---
+import DevOpsList from "@components/ui/DevOpsList.astro"
+import FullStack from "@components/icons/full-stack.astro";
+import ServicesCard from "@components/ui/ServicesCard.astro";
+import ArrowCircle from "@components/icons/arrow-circle.astro"
+import Automation from "@components/icons/automation.astro"
+---
+<div class="sticky-section">
+	<div class="sticky-image"></div>
+	<div class="cover w-full flex-c-c h-screen">
+		<div class=" px-4 sm:px-6 lg:px-8 py-24 space-y-8">
+		<div class="max-w-3xl text-start mx-auto">
+			<h1 class="block font-medium text-white text-3xl sm:text-5xl md:text-2xl lg:text-4xl font-inter">
+				Strategy and Implementation
+			</h1>
+		</div>
+		<div class="max-w-3xl text-start mx-auto">
+			<p class="text-lg text-base-100 font-inter">Specializing in database-driven web apps, modern API based websites, and DevOps Tools.</p>
+		</div>
+		</div>
+	</div>
+
+	<!-- Service Cards -->
+	<ServicesCard />
+
+	<!-- Service Points -->
+	<div class="grid grid-cols-12 gap-5 px-10 mt-12">
+		<div class="col-start-1 col-end-6">
+			<p class="text-xl">
+				<span class="text-primary">Result focused</span>, evidence based digital strategies and products. Working with clients to develop evidence based digital strategies and build digital products that deliver results.
+			</p>
+			<p class="text-base-100 text-lg mt-5">
+				Working with clients to develop evidence based digital strategies and build digital products that deliver results.
+			</p>
+		</div>
+		<div class="col-start-7 col-end-13 [&_svg]:h-7 [&_svg]:fill-primary [&_svg]:rotate-180">
+			<div class="flex [&_p]:text-base-100 [&_p]:text-sm [&_h1]:text-2xl [&_li]:flex [&_li]:items-start [&_li]:mb-5 [&_li]:h-16">
+				<ul class="w-1/2  ">
+					<li class="flex items-start mb-5">
+						<div class="h-10 pr-2">
+							<ArrowCircle />
+						</div>
+						<div>
+							<h1 class="-mt-0.5">Professional</h1>
+							<p>Builds applications by following the professional standards</p>
+						</div>
+					</li>
+					<li class="flex items-start mb-5">
+						<div class="h-10 pr-2">
+							<ArrowCircle />
+						</div>
+						<div>
+							<h1 class="-mt-0.5">Experience</h1>
+							<p>I have 5+ years of experience in this field</p>
+						</div>
+					</li>
+					<li class="flex items-start mb-5">
+						<div class="h-10 pr-2">
+							<ArrowCircle />
+						</div>
+						<div>
+							<h1 class="-mt-0.5">Communication</h1>
+							<p>Highly focused on getting in touch deeper understanding of the target</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="w-1/2">
+					<li class="flex items-start mb-5">
+						<div class="h-10 pr-2">
+							<ArrowCircle />
+						</div>
+						<div>
+							<h1 class="-mt-0.5">Always Learning</h1>
+							<p>I love to work on challenges to enhance my learning </p>
+						</div>
+					</li>
+					<li class="flex items-start mb-5">
+						<div class="h-10 pr-2">
+							<ArrowCircle />
+						</div>
+						<div>
+							<h1 class="-mt-0.5">Goal Oriented</h1>
+							<p>Completing the target is always my first priority</p>
+						</div>
+					</li>
+					<li class="flex items-start mb-5">
+						<div class="h-10 pr-2">
+							<ArrowCircle />
+						</div>
+						<div>
+							<h1 class="-mt-0.5">Customer Support</h1>
+							<p>Always respond to the queries even after the completion</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Web Development -->
+	<div class="px-10">
+		<div class="[&_svg]:h-12 [&_svg]:fill-primary my-2">
+			<FullStack />
+		</div>
+		<h1 class="text-5xl mt-2">Web Development</h1>
+		<p class="text-2xl text-base-100 pr-36 mt-2">Custom sites that are easy on the eye, loved by Google and optimised for user experience. As a chartered markerter as well as a web developer, I can help you with all aspects of your website strategy.</p>
+
+		<!-- Cards -->
+		<div class="grid grid-cols-12 gap-5 my-14">
+			<div class="col-start-1 col-end-7  h-96 rounded-lg bg-base-200"></div>
+			<div class="col-start-7 col-end-12  h-96 rounded-lg bg-base-200"></div>
+			<div class="col-start-1 col-end-6  h-96 rounded-lg bg-base-200"></div>
+			<div class="col-start-6 col-end-12  h-96 rounded-lg bg-base-200"></div>
+
+		</div>
+	</div>
+
+	<!-- DevOps Section -->
+	<div class="relative">
+		<div class="[&_svg]:h-20 flex-c-c [&_svg]:fill-primary"> 
+			<Automation />
+			<h1 class="text-5xl text-center mt-2">DevOps Services</h1>
+			<h5 class="text-2xl text-center text-base-100 mt-4">This is some nice text about DevOps services, tools and Implementation</h5>
+		</div>
+		<div class="flex mt-14">
+			<!-- Test Points -->
+			<DevOpsList />
+
+			<!-- Test End -->
+			<div class="sticky-side bg-base-100 rounded-xl w-2/3 h-[250px]">
+			</div>
+		</div>
+	</div>
+</div>
+
+  <style>
+
+	.cover{
+		height: 60vh;
+		position: relative;
+		background: radial-gradient(circle closest-side at 20% 50%);
+	}
+	.sticky-section {
+            position: relative;
+            z-index: 1;
+        }
+	.sticky-side{
+		position: sticky;
+		top: 70px;
+		right: 0;
+	}
+	.sticky-image {
+		position: sticky;
+		top: 0;
+		height: 100vh; 
+		background: linear-gradient( rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1)),
+		center/cover no-repeat url('/night.jpg');
+		z-index: -1;
+	}
+  </style>

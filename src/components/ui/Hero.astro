@@ -1,0 +1,38 @@
+---
+import Brands from "./Brands.astro";
+---
+<div class="w-full h-screen z-10">
+	<div class="cover w-full flex-c-c h-[90vh]">
+		<!-- <div class="spotlight"></div> -->
+		<div class="flex-c-c px-4 sm:px-6 lg:px-8 py-24 space-y-8">
+		<div class="max-w-3xl text-center mx-auto">
+			<h1 class="block font-extrabold text-white text-8xl sm:text-5xl md:text-2xl lg:text-4xl font-inter">
+			Full Stack Developer <br />& <br /> DevOps Engineer
+			</h1>
+		</div>
+		<div class="max-w-3xl text-center mx-auto">
+			<p class="text-2xl text-base-100 font-inter">Specializing in database-driven web apps, modern API based websites, and DevOps tools.</p>
+		</div>
+		</div>
+	</div>
+	<Brands />
+</div>
+
+  <style>
+	.cover{
+		/* height: 60vh; */
+		position: relative;
+		background: radial-gradient(circle closest-side at 20% 50%,
+		rgba(255,255,255,0) 50%,
+		rgba(0,0,0, 0.5)), no-repeat left/60% url('/space.webp');
+	}
+	.spotlight{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		/* background: radial-gradient(circle at 50px 50px, #00000000 10px, #000000ee 350px); */
+	}
+
+  </style>

@@ -12,42 +12,52 @@
     --color-card: 230, 230, 230;
     --color-card-muted: 205, 205, 205;
     --color-border: 236, 233, 233;
-    --color-primary: 251, 37, 118; /*pink*/
+    /*--color-primary: 251, 37, 118; /*pink*/
+    --color-primary: 55, 114, 255; /*pink*/
     --color-secondary :63,0,113; /*purple*/
     --color-base: 0,0,0;  
-    --color-base-100: 90, 69, 107;
+    --color-base-100: 156, 163, 175;
+    --color-base-200: 28, 36, 49;
     --color-accent:63,0,113;
-    --color-base-invert: 255,255,255
+    --color-base-invert: 255,255,255;
+    /* Scroll */
+    --scale: 0.1;
+    --space: 8vmin;
+    --font-primary: 'Lato', sans-serif;
+    --font-heading: 'Playfair Display', serif;
   }
-a{
-  cursor: pointer;
-  /* background-color: rgb(90, 69, 107); */
-}
-/* body{
-  background-color: #000000;
-  color: #fafafa;
-} */
-.font-inter{
-  font-family: 'Inter', sans-serif;
-}
-body{
-  overflow-x: none;
-  background-color:rgba(var(--color-base), 0.8);
-}
+  a{
+    cursor: pointer;
+    /* background-color: #1c2431 */
+  }
+
+  body{
+    background-color: #000000;
+    color: #fafafa;
+    margin: 0;
+    padding: 0;
+  }
+  .font-inter{
+    font-family: 'Inter', sans-serif;
+  }
+  *{
+    color: #dedede;
+  }
+  body{
+    background-color:rgba(var(--color-base), 1);
+  }
   /* body {
     @apply bg-skin-fill text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   } */
 
   .bg-glass{
-/* From https://css.glass */
-background: rgba(0, 0, 0, 0.6);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5.3px);
--webkit-backdrop-filter: blur(5.3px);
-    
-    
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
   }
   .btn {
     @apply py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold bg-primary text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 transition-all text-sm dark:focus:ring-secondary dark:focus:ring-offset-gray-800 rounded-full
@@ -74,10 +84,11 @@ backdrop-filter: blur(5.3px);
     focus-visible:no-underline focus-visible:outline-dashed;
   }
   svg {
-    @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
+    /* @apply inline-block h-8 w-8 fill-skin-base group-hover:fill-skin-accent; */
+    /* fill : #3772FF */
   }
   svg.icon-tabler {
-    @apply inline-block h-6 w-6 scale-125 fill-transparent 
+    @apply inline-block h-10 w-10 scale-125 fill-transparent 
     stroke-current stroke-2 opacity-90 group-hover:fill-transparent 
     sm:scale-110;
   }

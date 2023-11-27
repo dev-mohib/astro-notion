@@ -1,0 +1,43 @@
+---
+import { filePath } from '@/lib/blog-helpers'
+import type { Post, SelectProperty } from "@/lib/interfaces"
+import { getDateStr, getTagLink, getPostLink } from '@/lib/blog-helpers.ts'
+export interface Props {
+  post: Post,
+  enableLink? : boolean
+}
+
+const { post, enableLink } = Astro.props
+let image = ''
+if (post.FeaturedImage && post.FeaturedImage.Url) {
+  if (import.meta.env.DEV) {
+    image = post.FeaturedImage.Url
+  } else {
+    image = filePath(new URL(post.FeaturedImage.Url))
+  }
+}
+---
+<a href={getPostLink(post.Slug)} class="w-56 m-7 cursor-pointer hover:shadow-xl p-3">
+    <h1 class="text-xl font-extrabold font-inter">{post.Title}</h1>
+    <img src={image} alt="Featured image of the post" class="h-36" />
+    <p>{post.Excerpt ? post.Excerpt : ''}</p>
+    <p>{post.Date ? getDateStr(post.Date) : ''}{post.Date ? getDateStr(post.Date) : ''}</p>
+    <div class="post-tags">
+        {
+          post.Tags &&
+            post.Tags.length > 0 &&
+            post.Tags.map((tag: SelectProperty) => {
+              if (enableLink) {
+                return (
+                    <div class="mx-1">
+                        <a href={getTagLink(tag.name)} class={`tag ${tag.color}`}>
+                            {tag.name}
+                        </a>
+                    </div>
+                )
+              }
+              return <span class={`tag ${tag.color}`} class="mx-1">{tag.name}</span>
+            })
+        }
+      </div>
+</a>

@@ -1,0 +1,52 @@
+---
+import { NUMBER_OF_POSTS_PER_PAGE } from '@/server-constants'
+import {
+  getPosts,
+  getRankedPosts,
+  getAllTags,
+  getNumberOfPages,
+} from '@/lib/notion/client.ts'
+import Layout from '@layouts/Layout.astro'
+import NoContents from '@components/notion/NoContents.astro'
+import Pagination from '@/components/notion/Pagination.astro'
+import BlogPostsLink from '@components/notion/BlogPostsLink.astro'
+import BlogTagsLink from '@components/notion/BlogTagsLink.astro'
+import styles from '@styles/blog.module.css'
+import Card from '@/components/Card.astro'
+import Menu from '@/components/ui/Menu.astro'
+import Footer from "@components/ui/MyFooter.astro"
+import BlogCard from "./card.astro"
+const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
+  getPosts(NUMBER_OF_POSTS_PER_PAGE),
+  getRankedPosts(),
+  getAllTags(),
+  getNumberOfPages(),
+])
+---
+
+<Layout>
+  <Menu />
+  <div class="mt-28">
+    <div class="flex flex-wrap items-start justify-start">
+    {
+      posts.length === 0 ? (
+        <NoContents contents={posts} />
+      ) : (
+        // posts.map((post) =>  <Card post={post}/>)
+        posts.map((post) =>  <BlogCard post={post}/>)
+      )
+    }
+    </div>
+
+    <footer>
+      <Pagination currentPage={1} numberOfPages={numberOfPages} />
+    </footer>
+  </div>
+
+  <div slot="aside" class={styles.aside}>
+    <BlogPostsLink heading="Recommended" posts={rankedPosts} />
+    <BlogTagsLink heading="Categories" tags={tags} />
+  </div>
+
+  <Footer />
+</Layout>
