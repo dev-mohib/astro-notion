@@ -180,24 +180,24 @@ import AWS from "@components/icons/aws.astro"
   const delta = 5;
   const navbarHeight : number = navbar?.offsetHeight??0;
 
-  window.addEventListener("scroll", () => {
-      const currentScrollTop = window.pageYOffset;
+  // window.addEventListener("scroll", () => {
+  //     const currentScrollTop = window.pageYOffset;
 
-      // Scroll down
-      if (Math.abs(lastScrollTop - currentScrollTop) >= delta) {
-          if (currentScrollTop > lastScrollTop && currentScrollTop > navbarHeight) {
-              navbar.style.top = `-${navbarHeight}px`;
-          } else {
-              navbar.style.top = "0px";
-          }
-          lastScrollTop = currentScrollTop;
-      }
+  //     // Scroll down
+  //     if (Math.abs(lastScrollTop - currentScrollTop) >= delta) {
+  //         if (currentScrollTop > lastScrollTop && currentScrollTop > navbarHeight) {
+  //             navbar.style.top = `-${navbarHeight}px`;
+  //         } else {
+  //             navbar.style.top = "0px";
+  //         }
+  //         lastScrollTop = currentScrollTop;
+  //     }
 
-      // Toggle between fixed and relative positioning
-      if (currentScrollTop < navbarHeight) {
-          navbar.style.position = "fixed";
-      } else {
-          navbar.style.position = "relative";
-      }
-  });
+  //     // Toggle between fixed and relative positioning
+  //     if (currentScrollTop < navbarHeight) {
+  //         navbar.style.position = "fixed";
+  //     } else {
+  //         navbar.style.position = "relative";
+  //     }
+  // });
 </script>
