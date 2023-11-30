@@ -6,7 +6,7 @@ import Brands from "./Brands.astro";
 		<!-- <div class="spotlight"></div> -->
 		<div class="flex-c-c px-4 sm:px-6 lg:px-8 py-24 space-y-8">
 		<div class="max-w-3xl text-center mx-auto">
-			<h1 class="block font-extrabold text-white text-8xl sm:text-5xl md:text-2xl lg:text-4xl font-inter">
+			<h1 class="block font-extrabold text-white text-5xl  md:text-5xl lg:text-6xl font-inter">
 			Full Stack Developer <br />& <br /> DevOps Engineer
 			</h1>
 		</div>
@@ -19,12 +19,33 @@ import Brands from "./Brands.astro";
 </div>
 
   <style>
-	.cover{
-		/* height: 60vh; */
-		position: relative;
-		background: radial-gradient(circle closest-side at 20% 50%,
-		rgba(255,255,255,0) 50%,
-		rgba(0,0,0, 0.5)), no-repeat left/60% url('/space.webp');
+	
+	  .cover{
+		  /* height: 60vh; */
+		  position: relative;
+		  background: radial-gradient(circle closest-side at 70% 40%,
+		  rgba(255,255,255,0) 50%,
+		  rgba(0,0,0, 0.5)), no-repeat left/170% url('/space.webp');
+	  }	
+	@screen sm {
+	}
+	@screen md {
+		.cover{
+			/* height: 60vh; */
+			position: relative;
+			background: radial-gradient(circle closest-side at 30% 45%,
+			rgba(255,255,255,0) 50%,
+			rgba(0,0,0, 0.5)), no-repeat left/75% url('/space.webp');
+		}	
+	}
+	@screen lg {
+		.cover{
+			/* height: 60vh; */
+			position: relative;
+			background: radial-gradient(circle closest-side at 30% 50%,
+			rgba(255,255,255,0) 50%,
+			rgba(0,0,0, 0.5)), no-repeat left/75% url('/space.webp');
+		}	
 	}
 	.spotlight{
 		position: absolute;

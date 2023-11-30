@@ -1,0 +1,209 @@
+---
+import AstroIcon from "@components/icons/astro.astro"
+import FirebaseIcon from '@components/icons/firebase.astro';
+import NextjsIcon from "@components/icons/nextjs.astro"
+import FullStackIcon from "@components/icons/full-stack.astro"
+import Backend from "@components/icons/backend.astro"
+import StaticWebsite from "@components/icons/static-website.astro"
+import BaasPlatform from "@components/icons/baas-platform.astro" 
+import CloudService from "@components/icons/cloud-service.astro"
+import ContainerService from "@components/icons/container-service.astro"
+import CICD from "@components/icons/cicd-service.astro"
+import Linux from "@components/icons/linux.astro"
+import Docker from "@components/icons/docker.astro"
+import Terraform from "@components/icons/terraform.astro"
+import Jenkins from "@components/icons/jenkins.astro"
+---
+<!-- ========== HEADER ========== -->
+<header id="navbar" class="fixed flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm py-3 md:py-0 bg-glass rounded-none">
+  <nav class="max-w-[85rem] w-full mx-auto px-4 md:px-6 lg:px-8" aria-label="Global">
+    <div class="relative md:flex md:items-center md:justify-between">
+      <div class="flex items-center justify-between">
+        <a class="flex-none text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-label="Brand">Brand</a>
+        <div class="md:hidden">
+          <button type="button" class="hs-collapse-toggle flex justify-center items-center w-9 h-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+            <svg class="hs-collapse-open:hidden flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+            <svg class="hs-collapse-open:block hidden flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:flex-r-c">
+        <div class="overflow-hidden overflow-y-auto md:max-h-[60vh] lg:max-w-[75vh] max-h-[90vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-slate-700 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500">
+          <div class="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-center md:gap-x-0 md:mt-0 md:ps-7 md:divide-y-0 md:divide-solid dark:divide-gray-700">
+            <div class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] py-3 ">
+              <button type="button" class="flex items-center w-full font-normal text-base-invert hover:bg-gray-800 hover:rounded-full py-2 px-5">
+                Web Apps
+                <svg class="flex-shrink-0 ms-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="hs-dropdown-menu [&_svg]:h-10 [&_svg]:w-10 transition-[opacity,margin] duration-[100ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 
+              sm:w-2/3 md:w-2/3 xl:w-1/2 hidden z-10 sm:shadow-md rounded-lg p-2 md:bg-black
+              before:absolute top-full sm:right-1/2 sm:translate-x-1/2 sm:border before:-top-5 before:left-1/2 before:w-1/6 before:h-5 px-5 border-none ">
+                <div class="[&_svg]:h-10 [&_svg]:fill-primary grid grid-cols-1 md:grid-cols-2 grid-rows-6 md:grid-rows-4 gap-4 my-grid" >
+                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                    <div class="w-10 mt-2">
+                      <FullStackIcon />
+                    </div>
+                    <div class="flex flex-col px-3 rounded-md cursor-pointer">
+                      <h1 class="text-xl font-light text-base-invert">Full Stack</h1>
+                      <p class="text-sm text-gray-400">Modern intuitive Apps with custom rich functionalities built using modern full stack approach of development MERN Stack, Laravel.</p>
+                    </div>
+                  </a>
+                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                    <div class="w-10 mt-2">
+                      <Backend />
+                    </div>
+                    <div class="flex flex-col px-3 rounded-md cursor-pointer">
+                      <h1 class="text-xl font-light text-base-invert">Backend Solutions</h1>
+                      <p class="text-sm text-gray-400">Designing and implementing server-side logic to ensure optimal functionality.</p>
+                    </div>
+                  </a>
+                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                    <div class="w-10 mt-2">
+                      <StaticWebsite />
+                    </div>
+                    <div class="flex flex-col px-3 rounded-md cursor-pointer">
+                      <h1 class="text-xl font-light text-base-invert">Static Websites</h1>
+                      <p class="text-sm text-gray-400">Exceptionally fast and secure websites built with headless Content management system like Sanity, Strapi using Astro or Gatsby.js</p>
+                    </div>
+                  </a>
+                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                    <div class="w-10 mt-2">
+                      <BaasPlatform />
+                    </div>
+                    <div class="flex flex-col px-3 rounded-md cursor-pointer">
+                      <h1 class="text-xl font-light text-base-invert">BaaS Platforms</h1>
+                      <p class="text-sm text-gray-400">Get ready to use services quickly and efficiently for apps using Firebase, Supabase, AppWrite, or AWS Amplify  </p>
+                    </div>
+                  </a>
+                  <div class="md:col-span-2 h-0.5 bg-base-200" />
+                  <div class="md:row-start-4 flex justify-start items-start flex-wrap [&_svg]:h-4">
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FullStackIcon /><span class="font-inter text-sm font-bold ">MERN Stack</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><AstroIcon /><span class="font-inter text-sm font-bold ">Astro</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FirebaseIcon /><span class="font-inter text-sm font-bold ">Firebase</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><NextjsIcon /><span class="font-inter text-sm font-bold ">Next.js</span></div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] py-3">
+              <button type="button" class="flex items-center w-full font-normal text-base-invert hover:bg-gray-800 hover:rounded-full py-2 px-5">
+                DevOps
+                <svg class="flex-shrink-0 ms-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="hs-dropdown-menu [&_svg]:h-10 [&_svg]:w-10 transition-[opacity,margin] duration-[100ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 
+                sm:w-2/3 md:w-2/3 xl:w-1/2 hidden z-10 sm:shadow-md rounded-lg p-2 md:bg-black
+                before:absolute top-full sm:right-1/2 sm:translate-x-1/2 sm:border before:-top-5 before:left-1/2 before:w-1/6 before:h-5 px-5 border-none">
+                <div class="[&_svg]:h-10 [&_svg]:fill-primary grid grid-cols-1 md:grid-cols-2 grid-rows-6 md:grid-rows-4 gap-4 my-grid" >
+                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                    <div class="w-10 mt-2">
+                      <CloudService />
+                    </div>
+                    <div class="flex flex-col px-3 rounded-md cursor-pointer">
+                      <h1 class="text-xl font-light text-base-invert">Cloud Service</h1>
+                      <p class="text-sm text-gray-400">Configuring and managing cloud environments such as Virtual machines, databases, Serverless, and deployments with a focus on AWS and Azure.</p>
+                    </div>
+                  </a>
+                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                    <div class="w-10 mt-2">
+                      <ContainerService />
+                    </div>
+                    <div class="flex flex-col px-3 rounded-md cursor-pointer">
+                      <h1 class="text-xl font-light text-base-invert">Containerization</h1>
+                      <p class="text-sm text-gray-400">Efficiently packaging applications and dependencies using docker for consistent deployment on an isolated environment.</p>
+                    </div>
+                  </a>
+                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                    <div class="w-10 mt-2">
+                      <CICD />
+                    </div>
+                    <div class="flex flex-col px-3 rounded-md cursor-pointer">
+                      <h1 class="text-xl font-light text-base-invert">CI/CD</h1>
+                      <p class="text-sm text-gray-400">Implementing Continuous Integration and Continuous Deployment using Jenkins and GitHub Actions.</p>
+                    </div>
+                  </a>
+                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                    <div class="w-10 mt-2">
+                      <Linux />
+                    </div>
+                    <div class="flex flex-col px-3 rounded-md cursor-pointer">
+                      <h1 class="text-xl font-light text-base-invert">Linux</h1>
+                      <p class="text-sm text-gray-400">Proficient in Linux and Virtual Machines for optimal infrastructure management. </p>
+                    </div>
+                  </a>
+                  <div class="md:col-span-2 h-0.5 bg-base-200" />
+                  <div class="md:row-start-4 flex justify-start items-start flex-wrap [&_svg]:h-4">
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FullStackIcon /><span class="font-inter text-sm font-bold ">MERN Stack</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><AstroIcon /><span class="font-inter text-sm font-bold ">Astro</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FirebaseIcon /><span class="font-inter text-sm font-bold ">Firebase</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><NextjsIcon /><span class="font-inter text-sm font-bold ">Next.js</span></div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class=" font-normal text-base-invert hover:bg-gray-800 hover:rounded-full py-3 px-5 my-2" href="#" aria-current="page">Projects</a>
+            <a class=" font-normal text-base-invert hover:bg-gray-800 hover:rounded-full py-3 px-5 my-2" href="#" aria-current="page">Blogs</a>
+            <button class="btn md:hidden block py-3 px-5 my-2">Contact</button>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="pt-3 md:pt-0 hidden md:block">
+        <button class="btn md:block ">Contact</button>
+      </div>
+      
+    </div>
+  </nav>
+</header>
+<style>
+.my-grid {
+    grid-template-rows: 1fr 1fr 1fr 1fr auto auto;
+  }
+
+@screen md {
+  .my-grid {
+    grid-template-rows: 1fr 1fr 5px auto;
+  }
+}
+
+@screen lg {
+  .my-grid {
+    grid-template-rows: 1fr 1fr 10px auto;
+  }
+}
+
+@screen xl {
+  .my-grid {
+    grid-template-rows: 1fr 1fr 10px auto;
+  }
+}
+
+</style>
+<script>
+  //  const navbar : HTMLElement = document.getElementById("navbar")!;
+  // let lastScrollTop = 0;
+  // const delta = 5;
+  // const navbarHeight : number = navbar?.offsetHeight??0;
+
+  // window.addEventListener("scroll", () => {
+  //     const currentScrollTop = window.pageYOffset;
+
+  //     // Scroll down
+  //     if (Math.abs(lastScrollTop - currentScrollTop) >= delta) {
+  //         if (currentScrollTop > lastScrollTop && currentScrollTop > navbarHeight) {
+  //             navbar.style.top = `-${navbarHeight}px`;
+  //         } else {
+  //             navbar.style.top = "0px";
+  //         }
+  //         lastScrollTop = currentScrollTop;
+  //     }
+
+  //     // Toggle between fixed and relative positioning
+  //     if (currentScrollTop < navbarHeight) {
+  //         navbar.style.position = "fixed";
+  //     } else {
+  //         navbar.style.position = "relative";
+  //     }
+  // });
+</script>

@@ -24,8 +24,8 @@ import Automation from "@components/icons/automation.astro"
 	<ServicesCard />
 
 	<!-- Service Points -->
-	<div class="grid grid-cols-12 gap-5 px-10 mt-12">
-		<div class="col-start-1 col-end-6">
+	<div class="grid md:grid-cols-12 gap-5 px-10 mt-20">
+		<div class="md:col-start-1 md:col-end-6">
 			<p class="text-xl">
 				<span class="text-primary">Result focused</span>, evidence based digital strategies and products. Working with clients to develop evidence based digital strategies and build digital products that deliver results.
 			</p>
@@ -33,9 +33,9 @@ import Automation from "@components/icons/automation.astro"
 				Working with clients to develop evidence based digital strategies and build digital products that deliver results.
 			</p>
 		</div>
-		<div class="col-start-7 col-end-13 [&_svg]:h-7 [&_svg]:fill-primary [&_svg]:rotate-180">
-			<div class="flex [&_p]:text-base-100 [&_p]:text-sm [&_h1]:text-2xl [&_li]:flex [&_li]:items-start [&_li]:mb-5 [&_li]:h-16">
-				<ul class="w-1/2  ">
+		<div class="md:col-start-7 md:col-end-13 [&_svg]:h-7 [&_svg]:fill-primary [&_svg]:rotate-180">
+			<div class="flex flex-col md:flex-row [&_p]:text-base-100 [&_p]:text-sm [&_h1]:text-2xl [&_li]:flex [&_li]:items-start [&_li]:mb-5 [&_li]:h-16">
+				<ul class="md:w-1/2">
 					<li class="flex items-start mb-5">
 						<div class="h-10 pr-2">
 							<ArrowCircle />
@@ -64,7 +64,7 @@ import Automation from "@components/icons/automation.astro"
 						</div>
 					</li>
 				</ul>
-				<ul class="w-1/2">
+				<ul class="md:w-1/2">
 					<li class="flex items-start mb-5">
 						<div class="h-10 pr-2">
 							<ArrowCircle />
@@ -98,25 +98,24 @@ import Automation from "@components/icons/automation.astro"
 
 	</div>
 	<!-- Web Development -->
-	<div class="px-10">
-		<div class="[&_svg]:h-12 [&_svg]:fill-primary my-2">
+	<div class="mt-28">
+		<div class="px-10 [&_svg]:h-12 [&_svg]:fill-primary my-2">
 			<FullStack />
+			<h1 class="text-5xl mt-2">Web Development</h1>
+			<p class="text-2xl text-base-100 md:pr-36 mt-2">Custom sites that are easy on the eye, loved by Google and optimised for user experience. As a chartered markerter as well as a web developer, I can help you with all aspects of your website strategy.</p>
 		</div>
-		<h1 class="text-5xl mt-2">Web Development</h1>
-		<p class="text-2xl text-base-100 pr-36 mt-2">Custom sites that are easy on the eye, loved by Google and optimised for user experience. As a chartered markerter as well as a web developer, I can help you with all aspects of your website strategy.</p>
 
 		<!-- Cards -->
-		<div class="grid grid-cols-12 gap-5 my-14">
-			<div class="col-start-1 col-end-7  h-96 rounded-lg bg-base-200"></div>
-			<div class="col-start-7 col-end-12  h-96 rounded-lg bg-base-200"></div>
-			<div class="col-start-1 col-end-6  h-96 rounded-lg bg-base-200"></div>
-			<div class="col-start-6 col-end-12  h-96 rounded-lg bg-base-200"></div>
-
-		</div>
+		<div class="grid md:grid-cols-9 md:grid-rows-2 gap-4 [&_div]:h-96 [&_div]:bg-base-200 p-7 md:p-0 mt-12">
+			<div class="md:col-span-4 md:col-start-2">8</div>
+			<div class="md:col-span-3 md:col-start-6">9</div>
+			<div class="md:col-span-3 md:col-start-2 md:row-start-2">10</div>
+			<div class="md:col-span-4 md:col-start-5 md:row-start-2">11</div>
+	</div>
 	</div>
 
 	<!-- DevOps Section -->
-	<div class="relative">
+	<div class="relative mt-10">
 		<div class="[&_svg]:h-20 flex-c-c [&_svg]:fill-primary"> 
 			<Automation />
 			<h1 class="text-5xl text-center mt-2">DevOps Services</h1>
@@ -127,7 +126,7 @@ import Automation from "@components/icons/automation.astro"
 			<DevOpsList />
 
 			<!-- Test End -->
-			<div class="sticky-side bg-base-100 rounded-xl w-2/3 h-[250px]">
+			<div class="sticky-side bg-base-100 rounded-xl w-2/3 h-[250px] md:block hidden">
 			</div>
 		</div>
 	</div>

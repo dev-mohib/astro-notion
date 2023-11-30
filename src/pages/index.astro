@@ -9,10 +9,11 @@ import Brands from "@/components/ui/Brands.astro";
 import IntroSection from "@/components/ui/IntroSection.astro";
 import MyFooter from "@/components/ui/MyFooter.astro";
 const socialCount = SOCIALS.filter(social => social.active).length;
+import MegaMenu from "@/components/MegaMenu.astro";
 ---
 
 <Layout>
-  <Menu />
+  <MegaMenu />
   <Hero />
   <IntroSection />
 
