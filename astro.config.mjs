@@ -19,7 +19,7 @@ const getSite = function () {
     }
     return new URL(BASE_PATH, `https://${new URL(process.env.CF_PAGES_URL).host.split('.').slice(1).join('.')}`).toString();
   }
-  return new URL(BASE_PATH, 'http://localhost:3000').toString();
+  return new URL(BASE_PATH, 'http://localhost:4321').toString();
 };
 
 
