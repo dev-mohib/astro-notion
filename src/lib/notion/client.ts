@@ -53,8 +53,7 @@ import type {
   Reference,
 } from '@lib/interfaces'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-import { Client, APIResponseError } from '@notionhq/client'
-
+import { Client, APIResponseError } from '@notionhq/client' 
 const client = new Client({
   auth: NOTION_API_SECRET,
 })

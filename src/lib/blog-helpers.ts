@@ -7,6 +7,7 @@ import type {
   Heading3,
   RichText,
   Column,
+  Post,
 } from './interfaces'
 import { pathJoin } from './utils'
 
@@ -14,7 +15,18 @@ export const filePath = (url: URL): string => {
   const [dir, filename] = url.pathname.split('/').slice(-2)
   return pathJoin(BASE_PATH, `/notion/${dir}/${filename}`)
 }
+export const getFeaturedImagePath = (post : Post) => {
+  let image = ''
+if (post?.FeaturedImage?.Url) {
+  if (import.meta.env.DEV) {
+    image = post?.FeaturedImage.Url
+  } else {
+    image = filePath(new URL(post?.FeaturedImage?.Url??""))
+  }
+  return image;
+}
 
+}
 export const extractTargetBlocks = (
   blockType: string,
   blocks: Block[]

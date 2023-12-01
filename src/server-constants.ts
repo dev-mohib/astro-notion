@@ -1,5 +1,5 @@
 export const NOTION_API_SECRET =
-  import.meta.env.NOTION_API_SECRET || process.env.NOTION_API_SECRET || ''
+   process.env.NOTION_API_SECRET || import.meta.env.NOTION_API_SECRET || ''
 export const DATABASE_ID =
   import.meta.env.DATABASE_ID || process.env.DATABASE_ID || ''
 
@@ -15,3 +15,5 @@ export const REQUEST_TIMEOUT_MS = parseInt(
   10
 )
 export const ENABLE_LIGHTBOX = import.meta.env.ENABLE_LIGHTBOX
+
+
