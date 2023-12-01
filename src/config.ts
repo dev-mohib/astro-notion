@@ -11,7 +11,12 @@ export const SITE: Site = {
   
   export const LOCALE = ["en-EN"]; // set to [] to use the environment default
   
-
+export const LOGO_IMAGE = {
+  enable : false,
+  width : 10, 
+  height: 10, 
+  svg : ""
+}
   export const SOCIALS: SocialObjects = [
     {
       name: "Github",

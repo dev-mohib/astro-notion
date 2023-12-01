@@ -21,7 +21,7 @@ const { href, className, ariaLabel, title, disabled = false } = Astro.props;
   <slot />
 </a>
 
-<style>
+<style is:global>
   a {
     @apply hover:text-skin-accent;
   }

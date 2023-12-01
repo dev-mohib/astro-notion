@@ -117,7 +117,7 @@ import CheckIcon from "./check-icon.astro";
     </div>
 </div>
 
-<style>
+<style is:global>
     .cards-wrapper{
         /* @apply [&_.card]:bg-blue-400 [&_.card]:h-40 */
         @apply [&_.card]:text-white [&_svg]:fill-primary
@@ -125,4 +125,4 @@ import CheckIcon from "./check-icon.astro";
     .card{
       @apply [&_svg]:fill-primary [&_li]:text-base-100
     }
-    </style>
+</style>
