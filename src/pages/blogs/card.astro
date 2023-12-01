@@ -9,11 +9,11 @@ export interface Props {
 
 const { post, enableLink } = Astro.props
 let image = ''
-if (post.FeaturedImage && post.FeaturedImage.Url) {
+if (post?.FeaturedImage?.Url) {
   if (import.meta.env.DEV) {
     image = post.FeaturedImage.Url
   } else {
-    image = filePath(new URL(post.FeaturedImage.Url))
+    image = filePath(new URL(post?.FeaturedImage?.Url??""))
   }
 }
 ---
