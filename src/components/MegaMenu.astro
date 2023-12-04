@@ -1,25 +1,27 @@
 ---
-import AstroIcon from "@components/icons/astro.astro"
-import FirebaseIcon from '@components/icons/firebase.astro';
-import NextjsIcon from "@components/icons/nextjs.astro"
-import FullStackIcon from "@components/icons/full-stack.astro"
-import Backend from "@components/icons/backend.astro"
-import StaticWebsite from "@components/icons/static-website.astro"
-import BaasPlatform from "@components/icons/baas-platform.astro" 
-import CloudService from "@components/icons/cloud-service.astro"
-import ContainerService from "@components/icons/container-service.astro"
-import CICD from "@components/icons/cicd-service.astro"
-import Linux from "@components/icons/linux.astro"
-import Docker from "@components/icons/docker.astro"
-import Terraform from "@components/icons/terraform.astro"
-import Jenkins from "@components/icons/jenkins.astro"
+import { 
+  AstroIcon,
+  Firebase,
+  Nextjs,
+  FullStack,
+  Backend,
+  StaticWebsite,
+  BaasPlatform,
+  CloudService,
+  ContainerService,
+  CICD,
+  Linux,
+  Docker,
+  Terraform,
+  Jenkins
+} from "@Icons"
 ---
 <!-- ========== HEADER ========== -->
 <header id="navbar" class="fixed flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm py-3 md:py-0 bg-glass rounded-none">
   <nav class="max-w-[85rem] w-full mx-auto px-4 md:px-6 lg:px-8" aria-label="Global">
     <div class="relative md:flex md:items-center md:justify-between">
       <div class="flex items-center justify-between">
-        <a class="flex-none text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-label="Brand">Brand</a>
+        <a class="flex-none text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="/" aria-label="dev mohib">Dev Mohib</a>
         <div class="md:hidden">
           <button type="button" class="hs-collapse-toggle flex justify-center items-center w-9 h-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
             <svg class="hs-collapse-open:hidden flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
@@ -42,14 +44,14 @@ import Jenkins from "@components/icons/jenkins.astro"
                 <div class="[&_svg]:h-10 [&_svg]:fill-primary grid grid-cols-1 md:grid-cols-2 grid-rows-6 md:grid-rows-4 gap-4 my-grid" >
                   <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
                     <div class="w-10 mt-2">
-                      <FullStackIcon />
+                      <FullStack />
                     </div>
                     <div class="flex flex-col px-3 rounded-md cursor-pointer">
                       <h1 class="text-xl font-light text-base-invert">Full Stack</h1>
                       <p class="text-sm text-gray-400">Modern intuitive Apps with custom rich functionalities built using modern full stack approach of development MERN Stack, Laravel.</p>
                     </div>
                   </a>
-                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                  <a href="/backend-development" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
                     <div class="w-10 mt-2">
                       <Backend />
                     </div>
@@ -58,7 +60,7 @@ import Jenkins from "@components/icons/jenkins.astro"
                       <p class="text-sm text-gray-400">Designing and implementing server-side logic to ensure optimal functionality.</p>
                     </div>
                   </a>
-                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                  <a href="/static-website" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
                     <div class="w-10 mt-2">
                       <StaticWebsite />
                     </div>
@@ -67,7 +69,7 @@ import Jenkins from "@components/icons/jenkins.astro"
                       <p class="text-sm text-gray-400">Exceptionally fast and secure websites built with headless Content management system like Sanity, Strapi using Astro or Gatsby.js</p>
                     </div>
                   </a>
-                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                  <a href="/baas-platform" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
                     <div class="w-10 mt-2">
                       <BaasPlatform />
                     </div>
@@ -78,10 +80,10 @@ import Jenkins from "@components/icons/jenkins.astro"
                   </a>
                   <div class="md:col-span-2 h-0.5 bg-base-200" />
                   <div class="md:row-start-4 flex justify-start items-start flex-wrap [&_svg]:h-4">
-                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FullStackIcon /><span class="font-inter text-sm font-bold ">MERN Stack</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FullStack /><span class="font-inter text-sm font-bold ">MERN Stack</span></div>
                     <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><AstroIcon /><span class="font-inter text-sm font-bold ">Astro</span></div>
-                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FirebaseIcon /><span class="font-inter text-sm font-bold ">Firebase</span></div>
-                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><NextjsIcon /><span class="font-inter text-sm font-bold ">Next.js</span></div>  
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><Firebase /><span class="font-inter text-sm font-bold ">Firebase</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><Nextjs /><span class="font-inter text-sm font-bold ">Next.js</span></div>  
                   </div>
                 </div>
               </div>
@@ -95,7 +97,7 @@ import Jenkins from "@components/icons/jenkins.astro"
                 sm:w-2/3 md:w-2/3 xl:w-1/2 hidden z-10 sm:shadow-md rounded-lg p-2 md:bg-black
                 before:absolute top-full sm:right-1/2 sm:translate-x-1/2 sm:border before:-top-5 before:left-1/2 before:w-1/6 before:h-5 px-5 border-none">
                 <div class="[&_svg]:h-10 [&_svg]:fill-primary grid grid-cols-1 md:grid-cols-2 grid-rows-6 md:grid-rows-4 gap-4 my-grid" >
-                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                  <a href="/tools/cloud-service" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
                     <div class="w-10 mt-2">
                       <CloudService />
                     </div>
@@ -104,7 +106,7 @@ import Jenkins from "@components/icons/jenkins.astro"
                       <p class="text-sm text-gray-400">Configuring and managing cloud environments such as Virtual machines, databases, Serverless, and deployments with a focus on AWS and Azure.</p>
                     </div>
                   </a>
-                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                  <a href="/tools/containerization" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
                     <div class="w-10 mt-2">
                       <ContainerService />
                     </div>
@@ -113,7 +115,7 @@ import Jenkins from "@components/icons/jenkins.astro"
                       <p class="text-sm text-gray-400">Efficiently packaging applications and dependencies using docker for consistent deployment on an isolated environment.</p>
                     </div>
                   </a>
-                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                  <a href="/tools/cicd" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
                     <div class="w-10 mt-2">
                       <CICD />
                     </div>
@@ -122,7 +124,7 @@ import Jenkins from "@components/icons/jenkins.astro"
                       <p class="text-sm text-gray-400">Implementing Continuous Integration and Continuous Deployment using Jenkins and GitHub Actions.</p>
                     </div>
                   </a>
-                  <a href="/full-stack" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
+                  <a href="/tools/linux" class="flex hover:bg-base-200 p-4 rounded-lg py-2">
                     <div class="w-10 mt-2">
                       <Linux />
                     </div>
@@ -133,25 +135,25 @@ import Jenkins from "@components/icons/jenkins.astro"
                   </a>
                   <div class="md:col-span-2 h-0.5 bg-base-200" />
                   <div class="md:row-start-4 flex justify-start items-start flex-wrap [&_svg]:h-4">
-                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FullStackIcon /><span class="font-inter text-sm font-bold ">MERN Stack</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FullStack /><span class="font-inter text-sm font-bold ">MERN Stack</span></div>
                     <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><AstroIcon /><span class="font-inter text-sm font-bold ">Astro</span></div>
-                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><FirebaseIcon /><span class="font-inter text-sm font-bold ">Firebase</span></div>
-                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><NextjsIcon /><span class="font-inter text-sm font-bold ">Next.js</span></div>  
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><Firebase /><span class="font-inter text-sm font-bold ">Firebase</span></div>
+                    <div class="w-full md:w-1/2 hover:bg-base-200 flex rounded-md cursor-pointer py-3 px-1"><Nextjs /><span class="font-inter text-sm font-bold ">Next.js</span></div>  
                   </div>
                 </div>
               </div>
             </div>
-            <a class=" font-normal text-base-invert hover:bg-gray-800 hover:rounded-full py-3 px-5 my-2" href="#" aria-current="page">Projects</a>
-            <a class=" font-normal text-base-invert hover:bg-gray-800 hover:rounded-full py-3 px-5 my-2" href="#" aria-current="page">Blogs</a>
-            <button class="btn md:hidden block py-3 px-5 my-2">Contact</button>
+            <a class=" font-normal text-base-invert hover:bg-gray-800 hover:rounded-full py-3 px-5 my-2" href="/projects" aria-current="page">Projects</a>
+            <a class=" font-normal text-base-invert hover:bg-gray-800 hover:rounded-full py-3 px-5 my-2" href="/blogs" aria-current="page">Blogs</a>
+            <a href="/contact" class="btn md:hidden block py-3 px-5 my-2">Contact</a>
 
           </div>
         </div>
       </div>
       
-      <div class="pt-3 md:pt-0 hidden md:block">
+      <a href="/contact" class="pt-3 md:pt-0 hidden md:block">
         <button class="btn md:block ">Contact</button>
-      </div>
+      </a>
       
     </div>
   </nav>

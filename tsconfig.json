@@ -18,6 +18,9 @@
       "@components/*": [
         "components/*"
       ],
+      "@Icons": [
+        "components/icons/index.astro"
+      ],
       "@content/*": [
         "content/*"
       ],

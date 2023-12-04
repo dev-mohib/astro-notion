@@ -1,9 +1,7 @@
 ---
 import DevOpsList from "@components/ui/DevOpsList.astro"
-import FullStack from "@components/icons/full-stack.astro";
 import ServicesCard from "@components/ui/ServicesCard.astro";
-import ArrowCircle from "@components/icons/arrow-circle.astro"
-import Automation from "@components/icons/automation.astro"
+import { WebDev, Automation, ArrowCircle, FullStack, } from "@Icons"
 ---
 <div class="sticky-section">
 	<div class="sticky-image"></div>
@@ -24,8 +22,8 @@ import Automation from "@components/icons/automation.astro"
 	<ServicesCard />
 
 	<!-- Service Points -->
-	<div class="grid md:grid-cols-12 gap-5 px-10 mt-20">
-		<div class="md:col-start-1 md:col-end-6">
+	<div class="grid md:grid-cols-12 gap-5 px-10 mt-20 md:grid-rows-2">
+		<div class="lg:col-start-1 lg:col-end-6 md:col-start-1 md:col-end-10">
 			<p class="text-xl">
 				<span class="text-primary">Result focused</span>, evidence based digital strategies and products. Working with clients to develop evidence based digital strategies and build digital products that deliver results.
 			</p>
@@ -33,7 +31,7 @@ import Automation from "@components/icons/automation.astro"
 				Working with clients to develop evidence based digital strategies and build digital products that deliver results.
 			</p>
 		</div>
-		<div class="md:col-start-7 md:col-end-13 [&_svg]:h-7 [&_svg]:fill-primary [&_svg]:rotate-180">
+		<div class="md:row-start-2 lg:row-start-1 md:col-start-1 md:col-end-13 lg:col-start-7 lg:col-end-13 [&_svg]:h-7 [&_svg]:fill-primary [&_svg]:rotate-180">
 			<div class="flex flex-col md:flex-row [&_p]:text-base-100 [&_p]:text-sm [&_h1]:text-2xl [&_li]:flex [&_li]:items-start [&_li]:mb-5 [&_li]:h-16">
 				<ul class="md:w-1/2">
 					<li class="flex items-start mb-5">
@@ -99,18 +97,50 @@ import Automation from "@components/icons/automation.astro"
 	</div>
 	<!-- Web Development -->
 	<div class="mt-28">
-		<div class="px-10 [&_svg]:h-12 [&_svg]:fill-primary my-2">
-			<FullStack />
+		<div class="px-10 [&_svg]:h-14 [&_svg]:fill-primary my-2">
+			<WebDev />
 			<h1 class="text-5xl mt-2">Web Development</h1>
 			<p class="text-2xl text-base-100 md:pr-36 mt-2">Custom sites that are easy on the eye, loved by Google and optimised for user experience. As a chartered markerter as well as a web developer, I can help you with all aspects of your website strategy.</p>
 		</div>
 
-		<!-- Cards -->
-		<div class="grid md:grid-cols-9 md:grid-rows-2 gap-4 [&_div]:h-96 [&_div]:bg-base-200 p-7 md:p-0 mt-12">
-			<div class="md:col-span-4 md:col-start-2">8</div>
-			<div class="md:col-span-3 md:col-start-6">9</div>
-			<div class="md:col-span-3 md:col-start-2 md:row-start-2">10</div>
-			<div class="md:col-span-4 md:col-start-5 md:row-start-2">11</div>
+		<!-- Web Development Cards -->
+		<div class="grid md:grid-cols-9 md:grid-rows-2 gap-4 [&_.container]:h-[420px] [&_.container]:rounded-2xl [&_.container]:bg-base-200 p-7 md:p-0 mt-12">
+			<div class="container md:col-span-4 md:col-start-2 relative">
+				<div class="h-[180px] web-card cover1 rounded-t-2xl">
+					<img class="absolute h-40 top-2 left-1/2 -translate-x-1/2 z-10" src="/astronaut.png"/>
+				</div>
+				<div class="h-[200px] content text-white px-3 py-5">
+					<h1 class="font-inter font-bold text-2xl">Full Stack Application</h1>
+					<p class="py-2 text-lg font-inter text-base-100">Contemporary, user-friendly applications with tailored features, crafted through a modern full-stack development approach, utilizing MERN Stack and Laravel technologies.</p>
+				</div>
+			</div>
+			<div class="container md:col-span-3 md:col-start-6 relative">
+				<div class="h-[180px] web-card cover2 rounded-t-2xl">
+					<img class="absolute h-40 top-2 left-1/2 -translate-x-1/2 z-10" src="/astronaut.png"/>
+				</div>
+				<div class="h-[200px] content text-white px-3 py-5">
+					<h1 class="font-inter font-bold text-2xl">Single Page Application</h1>
+					<p class="py-2 text-lg font-inter text-base-100">Develop incredibly fast and secure single-page applications using advanced frameworks like React.js or Vue.js, coupled with efficient headless CMS platforms or any backend.</p>
+				</div>
+			</div>
+			<div class="container md:col-span-3 md:col-start-2 relative md:row-start-2">
+				<div class="h-[180px] web-card cover3 rounded-t-2xl">
+					<img class="absolute h-40 top-2 left-1/2 -translate-x-1/2 z-10" src="/astronaut.png"/>
+				</div>
+				<div class="h-[200px] content text-white px-3 py-5">
+					<h1 class="font-inter font-bold text-2xl">Static Website</h1>
+					<p class="py-2 text-lg font-inter text-base-100">Create exceptionally speedy and secure websites by employing headless content management systems such as Sanity and Strapi, combined with Astro or Gatsby.js.</p>
+				</div>
+			</div>
+			<div class="container md:col-span-4 md:col-start-5 relative md:row-start-2">
+				<div class="h-[180px] web-card cover4 rounded-t-2xl">
+					<img class="absolute h-40 top-2 left-1/2 -translate-x-1/2 z-10" src="/astronaut.png"/>
+				</div>
+				<div class="h-[200px] content text-white px-3 py-5">
+					<h1 class="font-inter font-bold text-2xl">2D/3D Canvas Website</h1>
+					<p class="py-2 text-lg font-inter text-base-100">Craft high-performance and secure 2D/3D websites leveraging cutting-edge technologies like Canvas or Three.js</p>
+				</div>
+			</div>
 	</div>
 	</div>
 
@@ -126,7 +156,7 @@ import Automation from "@components/icons/automation.astro"
 			<DevOpsList />
 
 			<!-- Test End -->
-			<div class="sticky-side bg-base-100 rounded-xl w-2/3 h-[250px] md:block hidden">
+			<div class="sticky-side bg-base-100 rounded-xl w-2/3 h-[280px] md:block hidden">
 			</div>
 		</div>
 	</div>
@@ -147,6 +177,11 @@ import Automation from "@components/icons/automation.astro"
 		position: sticky;
 		top: 70px;
 		right: 0;
+		background: url("/devops.gif") ;
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 50;
+		background-position: 100%;
 	}
 	.sticky-image {
 		position: sticky;
@@ -156,4 +191,43 @@ import Automation from "@components/icons/automation.astro"
 		center/cover no-repeat url('/night.jpg');
 		z-index: -1;
 	}
+
+	.container{
+		/* background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 8%, rgba(0,0,0,1) 100%); */
+	}
+	.web-card-1{
+		width: 100%;
+		height: 200px;
+		background-size: cover;
+		background-position: center; 
+	}
+	.cover1{
+		background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 100%), url('/public/abstract/1.jpg');
+	}
+	.cover2{
+		background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 100%), url('/public/abstract/2.jpg');
+	}
+	.cover3{
+		background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 100%), url('/public/abstract/5.jpg');
+	}
+	.cover4{
+		background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 100%), url('/public/abstract/4.jpg');
+	}
+	/* .web-card-1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+	  bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 1; 
+    } */
+	.content{
+		/* background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 8%, rgba(0,0,0,1) 100%) */
+	}
+	/* [astro-icon] {
+        color: blue;
+        fill: blue;
+    } */
   </style>

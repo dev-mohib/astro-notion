@@ -2,7 +2,8 @@
 import { SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
-
+import MegaMenu from "@/components/MegaMenu.astro";
+import MyFooter from "@/components/ui/MyFooter.astro";
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
@@ -81,10 +82,12 @@ const socialImageURL = new URL(
     <ViewTransitions />
 
     <!-- <script is:inline src="/toggle-theme.js"></script> -->
-    <script is:inline src="./node_modules/preline/dist/preline.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
+    <MegaMenu />
     <slot />
+    <MyFooter />
   </body>
 </html>
+<script is:inline src="/preline.js"></script>

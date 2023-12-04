@@ -26,8 +26,7 @@ import PostRelativeLink from '@components/notion/PostRelativeLink.astro'
 import BlogPostsLink from '@components/notion/BlogPostsLink.astro'
 import BlogTagsLink from '@components/notion/BlogTagsLink.astro'
 import styles from '@styles/blog.module.css'
-import Menu from '@/components/ui/Menu.astro'
-import Footer from '@/components/ui/MyFooter.astro'
+
 
 export async function getStaticPaths() {
   const posts = await getAllPosts()
@@ -102,7 +101,6 @@ if (post?.FeaturedImage && post?.FeaturedImage?.Url) {
   path={getPostLink(post.Slug)}
   ogImage={ogImage}
 >
-<Menu />
 <div class="bg-base-200 md:px-[10%] lg:px-[15%]">
   <div class="py-20">
     <div class={styles.post}>
@@ -139,5 +137,4 @@ if (post?.FeaturedImage && post?.FeaturedImage?.Url) {
     <BlogTagsLink heading="Categories" tags={tags} /> -->
   </div>
 </div>
-<Footer />
 </Layout>

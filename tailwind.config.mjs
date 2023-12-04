@@ -22,7 +22,7 @@ function withOpacity(variableName) {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
 	  './public/**/*.astro',  
 	  './src/**/*.{astro,js,jsx,ts,tsx,vue}',  
-	  'node_modules/preline/dist/*.js', 
+	  './node_modules/preline/dist/*.js', 
 	],
 	theme: {
 	  screens: {

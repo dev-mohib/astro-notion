@@ -1,4 +1,4 @@
-import type { Site, SocialObjects } from "./types";
+import type { Site, SocialObjects } from "./types/site";
 export const SITE: Site = {
     website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
     author: "Mohib Ali",
