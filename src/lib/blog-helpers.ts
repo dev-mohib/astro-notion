@@ -143,23 +143,39 @@ export const getNavLink = (nav: string) => {
 }
 
 export const getPostLink = (slug: string) => {
-  return pathJoin(BASE_PATH, `/posts/${slug}`)
+  return pathJoin(BASE_PATH, `/blogs/${slug}`)
 }
 
 export const getTagLink = (tag: string) => {
-  return pathJoin(BASE_PATH, `/posts/tag/${encodeURIComponent(tag)}`)
+  return pathJoin(BASE_PATH, `/blogs/tag/${encodeURIComponent(tag)}`)
 }
 
 export const getPageLink = (page: number, tag: string) => {
   if (page === 1) {
-    return tag ? getTagLink(tag) : pathJoin(BASE_PATH, '/')
+    return tag ? getTagLink(tag) : pathJoin(BASE_PATH, '/blogs')
   }
-  return tag
-    ? pathJoin(
-        BASE_PATH,
-        `/posts/tag/${encodeURIComponent(tag)}/page/${page.toString()}`
-      )
-    : pathJoin(BASE_PATH, `/posts/page/${page.toString()}`)
+  const link = tag
+  ? pathJoin(
+      BASE_PATH,
+      `/blogs/tag/${encodeURIComponent(tag)}/page/${page.toString()}`
+    )
+  : pathJoin(BASE_PATH, `/blogs/page/${page.toString()}`)
+  return link
+}
+
+export const getNextPageLink = (currentPage : number, totalPages : number) => {
+  if (currentPage >= totalPages) {
+    return pathJoin(BASE_PATH, `/blogs/page/${(currentPage)}`)
+  }else {
+    return pathJoin(BASE_PATH, `/blogs/page/${(currentPage + 1)}`)
+  }  
+}
+export const getPreviousePageLink = (currentPage : number) => {
+  if (currentPage <= 2) {
+    return pathJoin(BASE_PATH, '/blogs')
+  }else {
+    return pathJoin(BASE_PATH, `/blogs/page/${(currentPage - 1)}`)
+  }
 }
 
 export const getDateStr = (date: string) => {

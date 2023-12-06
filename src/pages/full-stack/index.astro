@@ -1,7 +1,12 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { StaticWebsite, FullStack, AWS, BaasPlatform, 
-        ContainerService, Terraform, Automation, ArrowCircle, CheckMark
+import {
+        StaticWebsite, FullStack, AWS, BaasPlatform, 
+        ContainerService, Terraform, Automation, ArrowCircle, CheckMark, 
+        Vue, Vercel, Typescript, Supabase, AstroJs, Mailjet, GoogleCloud, 
+        Tailwind, Stripe, Github, Cloudflare, Laravel, Sanity, Saleforce, 
+        StoryBlock, Drupal, Wordpress, FirebaseFilled, ReactJs, AppWrite, 
+        Strapi, Svelte, GraphQL, ElasticSearch, QuestionMark,NodeJs
 } from "@Icons"
 ---
 
@@ -10,7 +15,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
     <div class="hero w-full h-[90vh] flex items-center">
         <div class="px-4 sm:px-6 lg:px-8 py-24 space-y-8">
             <div class="mx-auto">
-                <h1 class="block font-extrabold text-white text-8xl sm:text-5xl md:text-2xl lg:text-4xl font-inter">
+                <h1 class="block font-extrabold text-white text-6xl md:text-3xl lg:text-4xl font-inter">
                 Full Stack Developer
                 </h1>
             </div>
@@ -72,7 +77,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
         </div>
     </div>
 
-    <!-- Projects -->
+    <!-- Web Application/Features -->
     <div class="projects grid grid-cols-11 grid-rows-12 gap-4 mt-28">
         <div class="col-span-8 row-span-2 col-start-2">
             <div class="col-span-8 col-start-2 row-span-1">
@@ -86,17 +91,14 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
         <div class="col-span-4 row-span-5 col-start-2 row-start-8 card">16</div>
         <div class="col-span-5 row-span-5 col-start-6 row-start-8 card">17</div>
     </div>
-
-    
     <!-- Features -->
     <div class="features relative mt-28">
         <div class="[&_svg]:h-20 flex-c-c [&_svg]:fill-primary"> 
             <Automation />
-            <h1 class="text-5xl text-center mt-2">Features</h1>
+            <h1 class="text-5xl text-center mt-2">Backend Development</h1>
             <h5 class="text-2xl text-center text-base-100 mt-4">This is some nice text about DevOps services, tools and Implementation</h5>
         </div>
         <div class="flex mt-14">
-            <!-- Feature Points -->
             <div class="flex w-full">
                 <ul class="w-1/2 [&_svg]:h-10 [&_svg]:fill-primary [&_svg]:rotate-180 pl-16">
                     <li class="flex items-start mb-8 cursor-pointer">
@@ -104,7 +106,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">Containerization</h1>
+                            <h1 class="text-2xl -mt-0.5">Database Management</h1>
                             <p class="text-base-100 text-sm">Run applications in an isolated environment</p>
                         </div>
                     </li>
@@ -113,7 +115,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">CI/CD</h1>
+                            <h1 class="text-2xl -mt-0.5">API Integration</h1>
                             <p class="text-base-100 text-sm">Continuous Integrations and Continuous Delivery</p>
                         </div>
                     </li>
@@ -122,7 +124,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">Container Orchastration</h1>
+                            <h1 class="text-2xl -mt-0.5">API Development</h1>
                             <p class="text-base-100 text-sm"> Automated scaling and management of containerized applications</p>
                         </div>
                     </li>
@@ -131,7 +133,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">Infrastructure as a Code</h1>
+                            <h1 class="text-2xl -mt-0.5">API Documentations</h1>
                             <p class="text-base-100 text-sm">Codify APIs into declarative configuration files</p>
                         </div>
                     </li>
@@ -140,7 +142,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">Monitoring</h1>
+                            <h1 class="text-2xl -mt-0.5">Server Managment</h1>
                             <p class="text-base-100 text-sm">Metrics, alert and visualization of data</p>
                         </div>
                     </li>
@@ -149,7 +151,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">AWS</h1>
+                            <h1 class="text-2xl -mt-0.5">Bussiness Logic</h1>
                             <p class="text-base-100 text-sm">Build, Deploy and manage application using hundreds of AWS solutions</p>
                         </div>
                     </li>
@@ -158,7 +160,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">GCP</h1>
+                            <h1 class="text-2xl -mt-0.5">Code Architecture</h1>
                             <p class="text-base-100 text-sm">Google Cloud Platform Services</p>
                         </div>
                     </li>
@@ -185,7 +187,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">Serverless</h1>
+                            <h1 class="text-2xl -mt-0.5">Frontend Development</h1>
                             <p class="text-base-100 text-sm">Easily build auto-scaling, low-overhead applications without managing servers</p>
                         </div>
                     </li>
@@ -194,14 +196,12 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                             <ArrowCircle />
                         </div>
                         <div class="-mt-0.5 ml-4">
-                            <h1 class="text-2xl -mt-0.5">Backend as a Service</h1>
+                            <h1 class="text-2xl -mt-0.5">Testing and Debugging</h1>
                             <p class="text-base-100 text-sm">ready to use backend services and focus on the frontend </p>
                         </div>
                     </li>
                 </ul>
             </div>
-    
-            <!-- Test End -->
             <div class="sticky-side bg-base-100 rounded-xl w-2/3 h-[250px]">
             </div>
         </div>
@@ -241,6 +241,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
             </div>
         </div>
     </div>
+    
     <!-- <Deliverables /> -->
     <div class="grid grid-cols-11 grid-rows-9 gap-4 my-20 deliverables">
         <div class="col-span-8 row-span-2 col-start-2">
@@ -250,113 +251,372 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
                     <p class="text-base-100 text-2xl">Bespoke websites that'll tell a story, connect with your audience and delight your customers. However, great website aesthetics, I build functional sites that drive traffic, convert visitors and grow your business.</p>
             </div>
         </div>
-        <!-- List 1 -->
+        
         <div class="col-span-3 row-span-7 col-start-2 row-start-3 deliverable-card [&_svg]:fill-primary">
             <ul class="space-y-3">
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   Lorem ipsum dolor sit amet
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    Lorem ipsum dolor sit amet
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   It is a long established fact reader
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    It is a long established fact reader
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   The point of using Lorem Ipsum
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    The point of using Lorem Ipsum
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   There are many variations of passages
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    There are many variations of passages
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   If you are going to use a of Lorem
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    If you are going to use a of Lorem
                 </li>
-             </ul>
+            </ul>
         </div>
-        <!-- List 2 -->
+        
         <div class="col-span-3 row-span-7 col-start-5 row-start-3 deliverable-card [&_svg]:fill-primary">
             <ul class="space-y-3">
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   Lorem ipsum dolor sit amet
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    Lorem ipsum dolor sit amet
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   It is a long established fact reader
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    It is a long established fact reader
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   The point of using Lorem Ipsum
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    The point of using Lorem Ipsum
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   There are many variations of passages
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    There are many variations of passages
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   If you are going to use a of Lorem
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    If you are going to use a of Lorem
                 </li>
-             </ul>
-        </div>
+            </ul>
+        </div> 
+
         <div class="col-span-3 row-span-7 col-start-8 row-start-3 deliverable-card [&_svg]:fill-primary">
             <ul class="space-y-3">
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   Lorem ipsum dolor sit amet
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    Lorem ipsum dolor sit amet
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   It is a long established fact reader
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    It is a long established fact reader
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   The point of using Lorem Ipsum
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    The point of using Lorem Ipsum
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   There are many variations of passages
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    There are many variations of passages
                 </li>
                 <li class="flex">
-                   <span class="text-primary mr-2.5 mt-0.5">
-                      <CheckMark />
-                   </span>
-                   If you are going to use a of Lorem
+                    <span class="text-primary mr-2.5 mt-0.5">
+                        <CheckMark />
+                    </span>
+                    If you are going to use a of Lorem
                 </li>
-             </ul>
+            </ul>
         </div>
     </div>
 
-    <!-- Faqs -->
+    <!-- Integrations -->
+    <div class="logo-cloud my-36 relative w-full overflow-hidden [&_svg]:h-10">
+        <div class="logo-row transition-transform duration-[2.5s] ease-in-out mx-2 grid grid-cols-3 md:grid-cols-6 gap-2 mb-2 w-[120%] md:w-[110%] -translate-x-20" >
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <FirebaseFilled />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Firebase
+                    </span>
+                </div>
+            </div>
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Vue />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Vue
+                    </span>
+                </div>
+            </div>
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <ReactJs />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">React.js
+                    </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Vercel />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Vercel
+                    </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Typescript />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Typescript
+                    </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <AppWrite />
+                </div>
+            </div>
+        </div>
+        <div class="logo-row transition-transform duration-[2.5s] ease-in-out mx-2 grid grid-cols-3 md:grid-cols-6 gap-2 mb-2 w-[120%] md:w-[110%] translate-x-0" >
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Wordpress />
+                </div>
+            </div>
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Supabase />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Supabase
+                    </span>
+                </div>
+            </div>
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <AstroJs />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Astro.js
+                    </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Strapi />
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <NodeJs />
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <GoogleCloud />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Google Cloud
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="logo-row transition-transform duration-[2.5s] ease-in-out mx-2 grid grid-cols-3 md:grid-cols-6 gap-2 mb-2 w-[120%] md:w-[110%] -translate-x-20" >
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Tailwind />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Tailwind
+                    </span>
+                </div>
+            </div>
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Stripe />
+                </div>
+            </div>
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Github />
+                <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Github
+                </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Cloudflare />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Cloudflare
+                    </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Laravel />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Laravel
+                    </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <ElasticSearch />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Elastic
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="logo-row transition-transform duration-[2.5s] ease-in-out mx-2 grid grid-cols-3 md:grid-cols-6 gap-2 mb-2 w-[120%] md:w-[110%] translate-x-0" >
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Sanity />
+                </div>
+            </div>
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Saleforce />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Saleforce
+                    </span>
+                </div>
+            </div>
+            <div class="bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <StoryBlock />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Storyblok
+                    </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Svelte />
+                    
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <GraphQL />
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">GraphQL
+                    </span>
+                </div>
+            </div>
+            <div class="hidden md:block bg-bunker-900 rounded-xl py-6 px-3 md:px-6 lg:px-8 border-[1px] border-gray-800 overflow-hidden" >
+                <div class="flex items-center justify-center" >
+                    <Drupal/>
+                    <span class="text-base font-semibold text-gray-400 line-clamp-1 ml-3 lg:ml-5">Drupal
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQS -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-2xl mx-auto mb-10 lg:mb-14">
+            <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Frequently asked questions</h2>
+        </div>
+        <div class="max-w-2xl mx-auto divide-y divide-gray-200 dark:divide-gray-700">
+            <div class="py-8 first:pt-0 last:pb-0">
+                <div class="flex gap-x-5">
+                <QuestionMark />
+                <div>
+                    <h3 class="md:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                    Can I cancel at anytime?
+                    </h3>
+                    <p class="mt-1 text-gray-500">
+                    Yes, you can cancel anytime no questions are asked while you cancel but we would highly appreciate if you will give us some feedback.
+                    </p>
+                </div>
+                </div>
+            </div>
+
+            <div class="py-8 first:pt-0 last:pb-0">
+                <div class="flex gap-x-5">
+                <QuestionMark />
+                <div>
+                    <h3 class="md:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                    My team has credits. How do we use them?
+                    </h3>
+                    <p class="mt-1 text-gray-500">
+                    Once your team signs up for a subscription plan. This is where we sit down, grab a cup of coffee and dial in the details.
+                    </p>
+                </div>
+                </div>
+            </div>
+        
+            <div class="py-8 first:pt-0 last:pb-0">
+                <div class="flex gap-x-5">
+                <QuestionMark />
+                <div>
+                    <h3 class="md:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                    How does Preline's pricing work?
+                    </h3>
+                    <p class="mt-1 text-gray-500">
+                    Our subscriptions are tiered. Understanding the task at hand and ironing out the wrinkles is key.
+                    </p>
+                </div>
+                </div>
+            </div>
+        
+            <div class="py-8 first:pt-0 last:pb-0">
+                <div class="flex gap-x-5">
+                <QuestionMark />
+                <div>
+                    <h3 class="md:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                    How secure is Preline?
+                    </h3>
+                    <p class="mt-1 text-gray-500">
+                    Protecting the data you trust to Preline is our first priority. This part is really crucial in keeping the project in line to completion.
+                    </p>
+                </div>
+                </div>
+            </div>
+        
+            <div class="py-8 first:pt-0 last:pb-0">
+                <div class="flex gap-x-5">
+                <QuestionMark />
+                <div>
+                    <h3 class="md:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                    How do I get access to a theme I purchased?
+                    </h3>
+                    <p class="mt-1 text-gray-500">
+                    If you lose the link for a theme you purchased, don't panic! We've got you covered. You can login to your account, tap your avatar in the upper right corner, and tap Purchases. If you didn't create a login or can't remember the information, you can use our handy Redownload page, just remember to use the same email you originally made your purchases with.
+                    </p>
+                </div>
+                </div>
+            </div>
+        
+            <div class="py-8 first:pt-0 last:pb-0">
+                <div class="flex gap-x-5">
+                <QuestionMark />
+                <div>
+                    <h3 class="md:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                    Upgrade License Type
+                    </h3>
+                    <p class="mt-1 text-gray-500">
+                    There may be times when you need to upgrade your license from the original type you purchased and we have a solution that ensures you can apply your original purchase cost to the new license purchase.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End FAQ -->
+
 </Layout>
 
 <style>
@@ -372,9 +632,7 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
         center/cover no-repeat url('/night-trees.jpg');
     }
     .services .card{
-        @apply bg-base-200 rounded-lg px-2 py-5
-    }
-    .services .card{
+        @apply bg-base-200 rounded-lg px-2 py-5;
         background: rgba(0, 0, 0, 0.34);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -383,13 +641,12 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
         border: 1px solid rgba(0, 0, 0, 0.3);
     }
     .projects .card{
-    @apply bg-blue-400 h-40 border-4
+    @apply bg-blue-400 h-[500px] rounded-lg
 }
-
-.sticky-section {
+    .sticky-section {
             position: relative;
             z-index: 1;
-        }
+    }
 	.sticky-side{
 		position: sticky;
 		top: 70px;
@@ -416,12 +673,18 @@ import { StaticWebsite, FullStack, AWS, BaasPlatform,
         -webkit-backdrop-filter: blur(1.5px);
         border: 1px solid rgba(0, 0, 0, 0.3);
     }
-
     .deliverables{
         /* @apply [&_.card]:bg-blue-400 [&_.card]:h-40 */
         @apply [&_.card]:text-white [&_svg]:fill-primary
     }
     .deliverable-card{
-      @apply [&_svg]:fill-primary [&_li]:text-base-100
+        @apply [&_svg]:fill-primary [&_li]:text-base-100
+    }
+    .integrations{
+        /* @apply w-[110%] flex-r-c */
+    }
+    .logo-box{
+        @apply bg-slate-700 rounded-xl py-6 px-3 md:px-6 lg:px-10 border-[1px] border-gray-800 mx-1 my-2;
+        width: 20%;
     }
 </style>

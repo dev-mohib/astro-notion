@@ -1,0 +1,296 @@
+---
+import Layout from "@layouts/Layout.astro";
+import {
+        StaticWebsite, FullStack, AWS, BaasPlatform, 
+        ContainerService, Terraform, Automation, ArrowCircle
+} from "@Icons"
+---
+
+<Layout>
+    <!-- Hero -->
+    <div class="hero w-full h-[90vh] flex items-center">
+        <div class="px-4 sm:px-6 lg:px-8 py-24 space-y-8">
+            <div class="mx-auto">
+                <h1 class="block font-extrabold text-white text-6xl md:text-3xl lg:text-4xl font-inter">
+                Docker
+                </h1>
+            </div>
+            <div class="mx-auto">
+                <p class="text-2xl font-inter">Specializing in database-driven web apps, modern API based websites, and DevOps tools.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Services -->
+    <div class="services grid grid-cols-8 md:grid-rows-3 lg:grid-rows-2 grid-rows-6 gap-4 place-content-between [&_svg]:h-10 [&_svg]:fill-primary">
+        <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-2 md:col-start-2">
+            <StaticWebsite />
+            <h1 class="font-inter pt-2 text-lg">MERN Stack</h1>
+            <div >
+                <p class="text-[1em] text-base-100">Static websites are fixed web pages with unchanging content, coded in HTML and CSS, suitable for fast loading and easy hosting.</p>
+            </div>
+            <a href="#" class="pb-3 text-primary">Static Website &#8594;</a>
+        </div>
+        <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-4 md:col-start-5">
+            <FullStack />
+            <h1 class="font-inter pt-2 text-lg">Laravel</h1>
+            <div >
+                <p class="text-[1em] text-base-100">A web application is an interactive software accessed via browsers, offering dynamic functionalities for seamless user interaction and task completion.</p>
+            </div>
+            <a href="#" class="pb-3 text-primary">Web Application &#8594;</a>
+        </div>
+        <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-6 md:col-start-2">
+            <AWS />
+            <h1 class="font-inter pt-2 text-lg">React.js</h1>
+            <div >
+                <p class="text-[1em] text-base-100">Amazon Web Services (AWS) is a cloud computing platform, offering a wide array of services for scalable, secure, and flexible infrastructure solutions.</p>
+            </div>
+            <a href="#" class="pb-3 text-primary">AWS &#8594;</a>
+        </div>
+        <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-4 lg:row-start-2 md:col-start-5 md:row-start-2">
+            <BaasPlatform />
+            <h1 class="font-inter pt-2 text-lg">BaaS</h1>
+            <div >
+                <p class="text-[1em] text-base-100">Backend as a Service (BaaS) simplifies backend development by outsourcing server-side tasks, allowing developers to focus on frontend logic.</p>
+            </div>
+            <a href="#" class="pb-3 text-primary">BaaS &#8594;</a>
+        </div>
+        <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-2 lg:row-start-2 md:col-start-2 md:row-start-3">
+            <ContainerService />
+            <h1 class="font-inter pt-2 text-lg">LAMP Stack</h1>
+            <div >
+                <p class="text-[1em] text-base-100">Containerization, exemplified by Docker, simplifies software deployment, ensuring consistency across diverse environments, fostering scalability.</p>
+            </div>
+            <a href="#" class="pb-3 text-primary">Containerization &#8594;</a>
+        </div>
+        <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-6 lg:row-start-2 md:col-start-5 md:row-start-3">
+            <Terraform />
+            <h1 class="font-inter pt-2 text-lg">Headless CMS</h1>
+            <div >
+                <p class="text-[1em] text-base-100">The Elastic Stack, or ELK Stack, encompasses Elasticsearch, Logstash, and Kibana, offering robust tools for log analysis, search, and visualization.</p>
+            </div>
+            <a href="#" class="pb-3 text-primary">Elastic Stack &#8594;</a>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features relative mt-28">
+        <div class="[&_svg]:h-20 flex-c-c [&_svg]:fill-primary"> 
+            <Automation />
+            <h1 class="text-5xl text-center mt-2">Backend Development</h1>
+            <h5 class="text-2xl text-center text-base-100 mt-4">This is some nice text about DevOps services, tools and Implementation</h5>
+        </div>
+        <div class="flex mt-14">
+            <div class="flex w-full">
+                <ul class="w-1/2 [&_svg]:h-10 [&_svg]:fill-primary [&_svg]:rotate-180 pl-16">
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">Database Management</h1>
+                            <p class="text-base-100 text-sm">Run applications in an isolated environment</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">API Integration</h1>
+                            <p class="text-base-100 text-sm">Continuous Integrations and Continuous Delivery</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">API Development</h1>
+                            <p class="text-base-100 text-sm"> Automated scaling and management of containerized applications</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">API Documentations</h1>
+                            <p class="text-base-100 text-sm">Codify APIs into declarative configuration files</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">Server Managment</h1>
+                            <p class="text-base-100 text-sm">Metrics, alert and visualization of data</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">Bussiness Logic</h1>
+                            <p class="text-base-100 text-sm">Build, Deploy and manage application using hundreds of AWS solutions</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">Code Architecture</h1>
+                            <p class="text-base-100 text-sm">Google Cloud Platform Services</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">Version Control</h1>
+                            <p class="text-base-100 text-sm">Tracking and managing the change to software code</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">SSL/CDN</h1>
+                            <p class="text-base-100 text-sm">Securely transmission and optimized site data</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">Frontend Development</h1>
+                            <p class="text-base-100 text-sm">Easily build auto-scaling, low-overhead applications without managing servers</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start mb-8 cursor-pointer">
+                        <div class="h-10">
+                            <ArrowCircle />
+                        </div>
+                        <div class="-mt-0.5 ml-4">
+                            <h1 class="text-2xl -mt-0.5">Testing and Debugging</h1>
+                            <p class="text-base-100 text-sm">ready to use backend services and focus on the frontend </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sticky-side bg-base-100 rounded-xl w-2/3 h-[250px]">
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="my-14 tools">
+        <div class="mb-10 ml-16">
+            <h1 class="text-primary text-6xl">Tools</h1>
+            <p class="text-2xl">All the popular tools to build a complete full stack application</p>
+        </div>
+    
+        <div class="tools-grid grid grid-cols-8 md:grid-rows-3 lg:grid-rows-2 grid-rows-6 gap-4 place-content-between [&_svg]:h-10 [&_svg]:fill-primary">
+            <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-2 md:col-start-2">
+                <StaticWebsite />
+                <h1 class="font-inter pt-2 text-lg">Node.js</h1>
+            </div>
+            <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-4 md:col-start-5">
+                <FullStack />
+                <h1 class="font-inter pt-2 text-lg">React.js</h1>
+            </div>
+            <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-6 md:col-start-2">
+                <AWS />
+                <h1 class="font-inter pt-2 text-lg">AWS</h1>
+            </div>
+            <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-4 lg:row-start-2 md:col-start-5 md:row-start-2">
+                <BaasPlatform />
+                <h1 class="font-inter pt-2 text-lg">Firebase</h1>
+            </div>
+            <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-2 lg:row-start-2 md:col-start-2 md:row-start-3">
+                <ContainerService />
+                <h1 class="font-inter pt-2 text-lg">Supabase</h1>
+            </div>
+            <div class="card col-span-6 md:col-span-3 col-start-2 lg:col-span-2 lg:col-start-6 lg:row-start-2 md:col-start-5 md:row-start-3">
+                <Terraform />
+                <h1 class="font-inter pt-2 text-lg">Elastic Stack</h1>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .hero{
+		/* height: 60vh; */
+		position: relative;
+		background: radial-gradient(circle closest-side at 20% 50%,
+		rgba(255,255,255,0) 50%,
+		rgba(0,0,0, 0.5)), no-repeat left/60% url('/sky.webp');
+	}
+    .services{
+    background: linear-gradient( rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1)),
+        center/cover no-repeat url('/night-trees.jpg');
+    }
+    .services .card{
+        @apply bg-base-200 rounded-lg px-2 py-5;
+        background: rgba(0, 0, 0, 0.34);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.5px);
+        -webkit-backdrop-filter: blur(1.5px);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .projects .card{
+    @apply bg-blue-400 h-[500px] rounded-lg
+}
+    .sticky-section {
+            position: relative;
+            z-index: 1;
+    }
+	.sticky-side{
+		position: sticky;
+		top: 70px;
+		right: 0;
+	}
+	.sticky-image {
+		position: sticky;
+		top: 0;
+		height: 100vh; 
+		background: linear-gradient( rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1)),
+		center/cover no-repeat url('/night.jpg');
+		z-index: -1;
+	}
+    .tools{
+    background: linear-gradient( rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1)),
+		center/cover no-repeat url('/mini-lights.jpg');
+    }
+    .tools-grid .card{
+        @apply bg-base-200 rounded-lg px-2 py-5;
+        background: rgba(0, 0, 0, 0.69);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.5px);
+        -webkit-backdrop-filter: blur(1.5px);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .deliverables{
+        /* @apply [&_.card]:bg-blue-400 [&_.card]:h-40 */
+        @apply [&_.card]:text-white [&_svg]:fill-primary
+    }
+    .deliverable-card{
+        @apply [&_svg]:fill-primary [&_li]:text-base-100
+    }
+    .integrations{
+        /* @apply w-[110%] flex-r-c */
+    }
+    .logo-box{
+        @apply bg-slate-700 rounded-xl py-6 px-3 md:px-6 lg:px-10 border-[1px] border-gray-800 mx-1 my-2;
+        width: 20%;
+    }
+</style>

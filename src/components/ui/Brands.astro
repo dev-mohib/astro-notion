@@ -1,27 +1,31 @@
 ---
-import ReactLogo from '@components/logos/ReactLogo.astro'
-import Supabase from '@components/logos/Supabase.astro'
-import GCP from '@components/logos/GCP.astro'
-// import Tailwind from './logos/Tailwindcss.astro'
-import AstroLogo from '@components/logos/Astro.astro'
-import AWS from '@components/logos/AWS.astro'
-import DevOps from '@components/logos/DevOps.astro'
-import Nodejs from '@components/logos/Nodejs.astro' 
-import Mongodb from '@components/logos/Mongodb.astro'
-import Firebase from '@components/logos/Firebase.astro'
-import Docker from '@components/logos/Docker.astro'
-import Flutter from '@components/logos/Flutter.astro'
+
+import DevOps from '@components/icons/logos/DevOps.astro'
+
+
+import { 
+    ReactJs,
+    Supabase,
+    GCPFilled,
+    AstroJs,
+    AWSFilled,
+    NodeJs,
+    MongoDB,
+    FirebaseFilled,
+    DockerFilled,
+    FlutterFilled,
+} from "@Icons"
 ---
 
 <div class="[&_svg]:h-14 [&_svg]:w-14 h-[10vh] max-w-7xl mx-auto px-4 md:flex md:grid-cols-10 gap-x-0 gap-y-6 grid grid-cols-5 justify-evenly items-center brands-row" >
     <div class="flex-r-c" >
-        <AWS />
+        <AWSFilled />
     </div>
     <div class="flex-r-c" >
-        <ReactLogo />
+        <ReactJs />
     </div>
     <div class="flex-r-c" >
-        <Nodejs />
+        <NodeJs />
     </div>
     <div class="flex-r-c" >
         <DevOps />
@@ -30,19 +34,19 @@ import Flutter from '@components/logos/Flutter.astro'
         <Supabase />
     </div>
     <div class="flex-r-c" >
-        <GCP />
+        <GCPFilled />
     </div>
     <div class="flex-r-c" >
-        <Flutter />
+        <FlutterFilled />
     </div>
     <div class="flex-r-c" >
-        <Firebase />
+        <FirebaseFilled />
     </div>
     <div class="flex-r-c" >
-        <AstroLogo />
+        <AstroJs />
     </div>
     <div class="flex-r-c" >
-        <Docker />
+        <DockerFilled />
     </div>
 </div>
 

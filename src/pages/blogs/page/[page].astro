@@ -1,0 +1,107 @@
+---
+import {
+  getPostsByPage,
+  getRankedPosts,
+  getAllTags,
+  getNumberOfPages
+} from '@lib/notion/client'
+import Layout from '@layouts/Layout.astro'
+import NoContents from '@components/notion/NoContents.astro'
+import PostDate from '@components/notion/PostDate.astro'
+import PostTags from '@components/notion/PostTags.astro'
+import PostTitle from '@components/notion/PostTitle.astro'
+import PostFeaturedImage from '@/components/notion/PostFeaturedImage.astro'
+import PostExcerpt from '@/components/notion/PostExcerpt.astro'
+import ReadMoreLink from '@/components/notion/ReadMoreLink.astro'
+import Pagination from '@/components/notion/Pagination.astro'
+import BlogPostsLink from '@components/notion/BlogPostsLink.astro'
+import BlogTagsLink from '@components/notion/BlogTagsLink.astro'
+import styles from '@styles/blog.module.css'
+import type { SelectProperty } from '@/lib/interfaces'
+import { getFeaturedImagePath, getPostLink, getTagLink } from '@/lib/blog-helpers'
+
+export async function getStaticPaths() {
+  const numberOfPages = await getNumberOfPages()
+
+  let params = []
+  for (let i = 2; i <= numberOfPages; i++) {
+    params.push({ params: { page: i.toString() } })
+  }
+  return params
+}
+
+const { page } = Astro.params
+
+const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
+  getPostsByPage(parseInt(page, 10)),
+  getRankedPosts(),
+  getAllTags(),
+  getNumberOfPages(),
+])
+---
+
+<Layout>
+  <div class="py-20 flex-c-c w-full">
+    <div class="flex flex-wrap items-start justify-start px-3 md:px-7">
+    {
+      posts.length === 0 ? (
+        <NoContents contents={posts} />
+      ) : (
+        // posts.map((post) =>  <Card post={post}/>)
+        posts.map((post) =>  <div class="w-full md:w-1/2 lg:w-1/3 p-2 md:p-3">
+          <div class="rounded-lg shadow-md border-none bg-base-200 h-[500px]">
+            <img class="rounded-t-lg h-56 w-full" src={getFeaturedImagePath(post)} alt="Featured image of the post" />
+            <div class="p-5">
+            <h5 class="font-bold text-2xl tracking-tight mb-2">{post?.Title??''}</h5>
+            <p class="font-normal mb-3">{post?.Excerpt ? post.Excerpt : ''}</p>
+            <div>
+            {
+                post?.Tags && post.Tags?.length > 0 &&
+                    post.Tags.map((tag: SelectProperty) => {
+                    if (false) { // enableLink property check
+                        return (
+                                <a href={getTagLink(tag.name)} class={`tag ${tag.color} mx-1 px-1 py-0.5`}>
+                                    {tag.name}
+                                </a>
+                        )
+                    }
+                    return <span class={`tag ${tag.color} mx-1 px-1 py-0.5`}>{tag.name}</span>
+                    // return <span class={`tag ${tag.color}`} class="p-1">{tag.name}</span>
+                    })
+                }
+            </div>
+                <!-- <p>{post.Date ? getDateStr(post.Date) : ''}</p> -->
+                <br />
+                <a class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" href={getPostLink(post.Slug)}>
+                    Read more
+                </a>
+            </div>
+          </div>
+        </div>
+        )
+      )
+    }
+    </div>
+      <Pagination currentPage={parseInt(page)} numberOfPages={numberOfPages} />
+  </div>
+
+  <div slot="aside" class={styles.aside}>
+    <BlogPostsLink heading="Recommended" posts={rankedPosts} />
+    <BlogTagsLink heading="Categories" tags={tags} />
+  </div>
+
+</Layout>
+
+<style>
+  .page-container {
+    margin: 0;
+    line-height: 1.3;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  @media (max-width: 640px) {
+    .page-container {
+      font-size: 1.15rem;
+    }
+  }
+</style>

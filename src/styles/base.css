@@ -42,6 +42,7 @@
   }
   *{
     color: #dedede;
+    font-family: 'Inter', 'sans-serif';
   }
   body{
     background-color:rgba(var(--color-base), 1);
