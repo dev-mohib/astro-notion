@@ -1,6 +1,4 @@
----
 import Automation from "./automation.astro";
-import AzureRocket from "./azure-rocket.astro";
 import BaasPlatform from "./baas-platform.astro";
 import Backend from "./backend.astro";
 import CloudService from "./cloud-service.astro";
@@ -11,13 +9,14 @@ import WebDev from "./WebDev.astro";
 import SinglePageApp from "./single-page-app.astro"
 import Canvas from "./canvas.astro"
 import CheckMark from "./check-mark.astro";
-export * from "./tools/index.astro"
-export * from "./devops/index.astro"
-export * from "./logos/index.astro"
-export * from "./ux/index.astro"
+export * from "./tools"
+export * from "./devops"
+export * from "./logos"
+export * from "./ux"
+export * from "./devops/azure"
+export * from "./devops/aws"
 export {
   Automation, 
-  AzureRocket,
   BaasPlatform,
   Backend, 
   CloudService,
@@ -29,8 +28,3 @@ export {
   Canvas,
   CheckMark,
 }
----
-
-
-
-

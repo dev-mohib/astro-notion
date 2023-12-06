@@ -20,6 +20,8 @@ import BlogPostsLink from '@components/notion/BlogPostsLink.astro'
 import BlogTagsLink from '@components/notion/BlogTagsLink.astro'
 import styles from '@styles/blog.module.css'
 import '@styles/notion-color.css'
+import {getFeaturedImagePath, getTagLink, getPostLink, getDateStr, timeAgo } from '@/lib/blog-helpers.ts'
+
 
 export async function getStaticPaths() {
   const allTags = await getAllTags()
@@ -39,7 +41,7 @@ const currentTag = posts[0].Tags.find((t) => t.name === tag)
 ---
 
 <Layout title={`Posts in ${tag}`} path={`/posts/tag/${tag}`}>
-  <div slot="main" class={styles.main}>
+  <div class="pt-20">
     <header>
       <div class="tag-container">
         <span class={`tag ${currentTag.color}`}>{tag}</span>
@@ -51,21 +53,38 @@ const currentTag = posts[0].Tags.find((t) => t.name === tag)
         <NoContents contents={posts} />
       ) : (
         posts.map((post) => (
-          <div class={styles.post}>
-            <PostDate post={post} />
-            <PostTags post={post} />
-            <PostTitle post={post} />
-            <PostFeaturedImage post={post} />
-            <PostExcerpt post={post} />
-            <ReadMoreLink post={post} />
+        <div class="w-full flex md:flex-row flex-col border-none my-5">
+            <div class="md:w-1/2 w-full">
+              <img class="rounded-t-lg w-full" src={getFeaturedImagePath(post)} alt="Featured image of the post" />
+            </div>
+            <div class="md:ml-5 py-5 w-full">
+              <a href={getPostLink(post.Slug)} class="font-bold text-2xl tracking-tight mb-2">{post?.Title??''}</a>
+              <p class="">{post.Date ? timeAgo(post.Date) + ' ago' : ''} </p>
+              <p class="font-normal mb-3 text-base-100">{post?.Excerpt ? post.Excerpt : ''}</p>
+              <div>
+                {
+                  post?.Tags && post.Tags?.length > 0 &&
+                      post.Tags.map((tag: SelectProperty) => {
+                      if (false) { // enableLink property check
+                          return (
+                                  <a href={getTagLink(tag.name)} class={`tag ${tag.color} mx-1 px-1 py-0.5`}>
+                                      {tag.name}
+                                  </a>
+                          )
+                      }
+                      return <span class={`tag ${tag.color} mx-1 px-1 py-0.5 rounded`}>{tag.name}</span>
+                      })
+                }
+              </div>
+            </div>
           </div>
         ))
       )
     }
 
-    <footer>
+    <div class="my-10">
       <Pagination tag={tag} currentPage={1} numberOfPages={numberOfPages} />
-    </footer>
+    </div>
   </div>
 
   <div slot="aside" class={styles.aside}>

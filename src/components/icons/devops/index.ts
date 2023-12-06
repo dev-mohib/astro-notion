@@ -1,4 +1,3 @@
----
 import Ansible from "./ansible.astro"
 import CircleCi from "./circleci.astro"
 import Consul from "./consul.astro"
@@ -28,4 +27,3 @@ export {
     Prometheus,
     Terraform,
 }
----

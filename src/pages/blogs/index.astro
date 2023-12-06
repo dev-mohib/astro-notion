@@ -12,9 +12,8 @@ import Pagination from '@/components/notion/Pagination.astro'
 import BlogPostsLink from '@components/notion/BlogPostsLink.astro'
 import BlogTagsLink from '@components/notion/BlogTagsLink.astro'
 import styles from '@styles/blog.module.css'
-// import Card from '@/components/Card.astro'
 
-import {getFeaturedImagePath, getTagLink, getPostLink } from '@/lib/blog-helpers.ts'
+import {getFeaturedImagePath, getTagLink, getPostLink, getDateStr, timeAgo } from '@/lib/blog-helpers.ts'
 import type { SelectProperty } from '@/lib/interfaces'
 const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
   getPosts(NUMBER_OF_POSTS_PER_PAGE),
@@ -22,47 +21,42 @@ const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
   getAllTags(),
   getNumberOfPages(),
 ])
-console.log({numberOfPages});
+
 ---
 
 <Layout>
   <div class="py-20 flex-c-c w-full">
-    <div class="flex flex-wrap items-start justify-start px-3 md:px-7">
+    <div class="px-3 md:px-7">
     {
       posts.length === 0 ? (
         <NoContents contents={posts} />
       ) : (
-        // posts.map((post) =>  <Card post={post}/>)
-        posts.map((post) =>  <div class="w-full md:w-1/2 lg:w-1/3 p-2 md:p-3">
-          <div class="rounded-lg shadow-md border-none bg-base-200 h-[500px]">
-            <img class="rounded-t-lg h-56 w-full" src={getFeaturedImagePath(post)} alt="Featured image of the post" />
-            <div class="p-5">
-            <h5 class="font-bold text-2xl tracking-tight mb-2">{post?.Title??''}</h5>
-            <p class="font-normal mb-3">{post?.Excerpt ? post.Excerpt : ''}</p>
-            <div>
-            {
-                post?.Tags && post.Tags?.length > 0 &&
-                    post.Tags.map((tag: SelectProperty) => {
-                    if (false) { // enableLink property check
-                        return (
-                                <a href={getTagLink(tag.name)} class={`tag ${tag.color} mx-1 px-1 py-0.5`}>
-                                    {tag.name}
-                                </a>
-                        )
-                    }
-                    return <span class={`tag ${tag.color} mx-1 px-1 py-0.5`}>{tag.name}</span>
-                    // return <span class={`tag ${tag.color}`} class="p-1">{tag.name}</span>
-                    })
-                }
+        posts.map((post) => 
+          <div class="w-full flex md:flex-row flex-col border-none my-5">
+            <div class="md:w-1/2 w-full">
+              <img class="rounded-t-lg w-full" src={getFeaturedImagePath(post)} alt="Featured image of the post" />
             </div>
-                <!-- <p>{post.Date ? getDateStr(post.Date) : ''}</p> -->
-                <br />
-                <a class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" href={getPostLink(post.Slug)}>
-                    Read more
-                </a>
+            <div class="md:ml-5 py-5 w-full">
+              <a href={getPostLink(post.Slug)} class="font-bold text-2xl tracking-tight mb-2">{post?.Title??''}</a>
+              <p class="">{post.Date ? timeAgo(post.Date) + ' ago' : ''} </p>
+              <p class="font-normal mb-3 text-base-100">{post?.Excerpt ? post.Excerpt : ''}</p>
+              <div>
+                {
+                  post?.Tags && post.Tags?.length > 0 &&
+                      post.Tags.map((tag: SelectProperty) => {
+                      if (false) { // enableLink property check
+                          return (
+                                  <a href={getTagLink(tag.name)} class={`tag ${tag.color} mx-1 px-1 py-0.5`}>
+                                      {tag.name}
+                                  </a>
+                          )
+                      }
+                      return <span class={`tag ${tag.color} mx-1 px-1 py-0.5 rounded`}>{tag.name}</span>
+                      })
+                }
+              </div>
             </div>
           </div>
-        </div>
         )
       )
     }
@@ -70,6 +64,12 @@ console.log({numberOfPages});
       <Pagination currentPage={1} numberOfPages={numberOfPages} />
   </div>
 
+  <div class="my-10 flex flex-wrap">
+    {
+      tags.map(tag => 
+      <a href={getTagLink(tag.name)} class={`post-tag ${tag.color}`}>{tag.name}</a>)
+    }
+  </div>
   <div slot="aside" class={styles.aside}>
     <BlogPostsLink heading="Recommended" posts={rankedPosts} />
     <BlogTagsLink heading="Categories" tags={tags} />
@@ -80,5 +80,8 @@ console.log({numberOfPages});
 <style>
   .grid div{
     @apply h-56 bg-green-400
+  }
+  .post-tag{
+    @apply rounded-sm border border-base-100 px-10 py-2 text-white mx-2 my-1 cursor-pointer
   }
 </style>

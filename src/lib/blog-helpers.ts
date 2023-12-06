@@ -163,21 +163,47 @@ export const getPageLink = (page: number, tag: string) => {
   return link
 }
 
-export const getNextPageLink = (currentPage : number, totalPages : number) => {
+export const getNextPageLink = (currentPage : number, totalPages : number, tag? : string) => {
   if (currentPage >= totalPages) {
-    return pathJoin(BASE_PATH, `/blogs/page/${(currentPage)}`)
+    return tag ? pathJoin(BASE_PATH, `/blogs/tag/${encodeURIComponent(tag)}/page/${(currentPage)}`): pathJoin(BASE_PATH, `/blogs/page/${(currentPage)}`)
   }else {
-    return pathJoin(BASE_PATH, `/blogs/page/${(currentPage + 1)}`)
+    return tag? pathJoin(BASE_PATH, `/blogs/tag/${encodeURIComponent(tag)}/page/${(currentPage + 1)}`): pathJoin(BASE_PATH, `/blogs/page/${(currentPage + 1)}`)
   }  
 }
-export const getPreviousePageLink = (currentPage : number) => {
+export const getPreviousePageLink = (currentPage : number, tag? : string) => {
   if (currentPage <= 2) {
-    return pathJoin(BASE_PATH, '/blogs')
+    return tag? pathJoin(BASE_PATH, `/blogs/tag/${encodeURIComponent(tag)}`): pathJoin(BASE_PATH, `/blogs`)
   }else {
-    return pathJoin(BASE_PATH, `/blogs/page/${(currentPage - 1)}`)
+    return tag? pathJoin(BASE_PATH, `/blogs/tag/${encodeURIComponent(tag)}/page/${(currentPage - 1)}`) : pathJoin(BASE_PATH, `/blogs/page/${(currentPage - 1)}`)
   }
 }
 
+export function timeAgo(date : string) {
+  const seconds = Math.floor((Date.now() - Date.parse(date)) / 1000);
+
+  let interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return Math.floor(interval) + " years";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + " months";
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + " hours";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + " minutes";
+  }
+  return Math.floor(seconds) + " seconds";
+}
 export const getDateStr = (date: string) => {
   const dt = new Date(date)
 

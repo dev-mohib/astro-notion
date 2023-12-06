@@ -19,7 +19,7 @@
         "components/*"
       ],
       "@Icons": [
-        "components/icons/index.astro"
+        "components/icons/index.ts"
       ],
       "@content/*": [
         "content/*"

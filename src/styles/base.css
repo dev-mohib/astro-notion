@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,7 +16,9 @@
     --color-primary: 55, 114, 255; /*pink*/
     --color-secondary :63,0,113; /*purple*/
     --color-base: 0,0,0;  
-    --color-base-100: 156, 163, 175;
+    --color-base-1000: 156, 163, 175;
+    --color-base-100: 87, 97, 128;
+    --color-base-2000: 21, 22, 22;
     --color-base-200: 28, 36, 49;
     --color-accent:63,0,113;
     --color-base-invert: 255,255,255;
@@ -32,7 +34,7 @@
   }
 
   body{
-    background-color: #000000;
+    /* background-color: rgb(var(--color-base-200)); */
     color: #fafafa;
     margin: 0;
     padding: 0;
@@ -45,7 +47,7 @@
     font-family: 'Inter', 'sans-serif';
   }
   body{
-    background-color:rgba(var(--color-base), 1);
+    background-color: rgba(var(--color-base), 1);
   }
   /* body {
     @apply bg-skin-fill text-skin-base 

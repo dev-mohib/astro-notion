@@ -1,4 +1,3 @@
----
 import AstroFilled from "./Astro.astro"
 import AWSFilled from "./AWS.astro"
 import DockerFilled from "./Docker.astro"
@@ -13,4 +12,3 @@ export {
     FlutterFilled,
     GCPFilled
 }
----

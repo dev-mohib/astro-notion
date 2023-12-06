@@ -1,4 +1,3 @@
----
 import AirTable from "./airtable.astro"
 import AstroJs from "./astro-js.astro"
 import AppWrite from "./appwrite.astro"
@@ -82,4 +81,3 @@ export {
     Terminal,
     AstroJs
 }
----
