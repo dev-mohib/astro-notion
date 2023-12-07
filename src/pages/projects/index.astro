@@ -1,13 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-const projects = [
-    {image : "augle.gif", title : "Animatix"},
-    {image : "motionlayer.gif", title : "LayerCraft"},
-    {image : "codeyolo.gif", title : "Codeyolo"},
-    {image : "rewardwee.png", title : "Rewardwee"}
-    ]
+import { projects } from "@/data/projects"
 ---
-<Layout>
+<Layout title="Dev Mohib | Projecta">
     <div class="pt-28 lg:px-10 px-4 md:px-5">
         <h1 class="text-2xl font-bold my-10">Featured Projects</h1>
         {
@@ -21,21 +16,19 @@ const projects = [
                         <div class="lg:px-10">
                             <h1 class="py-4 text-2xl font-bold">{project.title}</h1>
                             <ul class=" ">
-                                <li>Feature 1</li>
-                                <li>Feature 2</li>
-                                <li>Feature 3</li>
-                                <li>Feature 4</li>
+                                {
+                                    project.feature1.map(f => <li>{f}</li>)
+                                }
                             </ul>
-                            <button class="btn !rounded-md my-4">Live</button>
+                            <a  target="_blank" href={project.link} class="btn !rounded-md my-4">Live</a>
                         </div>
                         <div class="lg:px-10 mt-14">
                             <ul>
-                                <li>Feature 1</li>
-                                <li>Feature 2</li>
-                                <li>Feature 3</li>
-                                <li>Feature 4</li>
+                                {
+                                    project.feature2.map(f => <li>{f}</li>)
+                                }
                             </ul>
-                            <button class="btn !bg-base-200 !rounded-md my-4">Read</button>
+                            <a href={`projects/${project.slug}`} class="btn !bg-base-200 !rounded-md my-4">Read</a>
                         </div>
                     </div>
                 </div>

@@ -36,7 +36,7 @@ const [posts, rankedPosts, tags, numberOfPages] = await Promise.all([
             <div class="md:w-1/2 w-full">
               <img class="rounded-t-lg w-full" src={getFeaturedImagePath(post)} alt="Featured image of the post" />
             </div>
-            <div class="md:ml-5 py-5 w-full">
+            <div class="md:ml-5 pb-5 w-full">
               <a href={getPostLink(post.Slug)} class="font-bold text-2xl tracking-tight mb-2">{post?.Title??''}</a>
               <p class="">{post.Date ? timeAgo(post.Date) + ' ago' : ''} </p>
               <p class="font-normal mb-3 text-base-100">{post?.Excerpt ? post.Excerpt : ''}</p>
