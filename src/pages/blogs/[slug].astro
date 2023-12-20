@@ -15,6 +15,7 @@ import {
   getPostLink,
   filePath,
   extractTargetBlocks,
+  getFeaturedImagePath
 } from '@lib/blog-helpers.ts'
 import Layout from '@layouts/Layout.astro'
 
@@ -101,10 +102,13 @@ if (post?.FeaturedImage && post?.FeaturedImage?.Url) {
   path={getPostLink(post.Slug)}
   ogImage={ogImage}
 >
-<div class="bg-base-200 md:px-[10%] lg:px-[15%]">
+<div class="bg-base-200 md:px-[10%] lg:px-[15%] px-3">
   <div class="py-20">
     <div class={styles.post}>
       <!-- <PostDate post={post} /> -->
+      <div class="w-full my-3">
+        <img class="rounded-t-lg w-full" src={getFeaturedImagePath(post)} alt="Featured image of the post" />
+      </div>
       <PostTags post={post} />
       <PostTitle post={post} enableLink={false} />
       <PostBody blocks={blocks} />
