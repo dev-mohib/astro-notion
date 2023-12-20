@@ -1,6 +1,6 @@
 ---
-import type { Post } from '@lib/interfaces.ts'
-import { filePath, getPostLink } from '@lib/blog-helpers.ts'
+import type { Post, SelectProperty } from '@lib/interfaces.ts'
+import { filePath, getFeaturedImagePath, getPostLink, getTagLink, timeAgo } from '@lib/blog-helpers.ts'
 import NoContents from './NoContents.astro'
 import GetNotionImage from './GetNotionImage.astro'
 export interface Props {
@@ -18,19 +18,33 @@ const { heading, posts } = Astro.props
     posts.length === 0 ? (
       <NoContents contents={posts} />
     ) : (
-      <div class="pb-20">
+      <div class="px-3 md:px-7">
         {posts.map((post: Post) => (
-        <div class="bg-base-200 shadow-md hover:shadow-2xl border-none rounded-2xl max-w-xs m-5">
-        <!--<GetNotionImage post={post} classList='rounded-t-lg h-56 w-full'/> -->
-        <div class="p-5">
-          <h5 class="font-bold text-2xl tracking-tight mb-2">{post.Title}</h5>
-          <p class="font-normal mb-3">{post.Excerpt ? post.Excerpt : ''}</p>
-            <br />
-            <a class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" href={getPostLink(post.Slug)}>
-                Read more
-            </a>
-        </div>
-    </div>
+          <div class="w-full flex md:flex-row flex-col border-none my-5">
+            <div class="md:w-1/2 w-full">
+              <img class="rounded-t-lg w-full" src={getFeaturedImagePath(post)} alt="Featured image of the post" />
+            </div>
+            <div class="md:ml-5 pb-5 w-full">
+              <a href={getPostLink(post.Slug)} class="font-bold text-2xl tracking-tight mb-2">{post?.Title??''}</a>
+              <p class="">{post.Date ? timeAgo(post.Date) + ' ago' : ''} </p>
+              <p class="font-normal mb-3 text-base-100">{post?.Excerpt ? post.Excerpt : ''}</p>
+              <div>
+                {
+                  post?.Tags && post.Tags?.length > 0 &&
+                      post.Tags.map((tag: SelectProperty) => {
+                      if (false) { // enableLink property check
+                          return (
+                                  <a href={getTagLink(tag.name)} class={`tag ${tag.color} mx-1 px-1 py-0.5`}>
+                                      {tag.name}
+                                  </a>
+                          )
+                      }
+                      return <span class={`tag ${tag.color} mx-1 px-1 py-0.5 rounded`}>{tag.name}</span>
+                      })
+                }
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     )
@@ -38,13 +52,11 @@ const { heading, posts } = Astro.props
 </div>
 
 <style>
-  .blog-posts-link {
-  }
   .blog-posts-link h2 {
     margin: 0;
-    padding-left: 0.4rem;
-    color: #777;
-    font-size: 0.95rem;
+    /* padding-left: 0.4rem; */
+    /* color: #777; */
+    font-size: 1.3rem;
   }
   .blog-posts-link ul {
     list-style-type: none;

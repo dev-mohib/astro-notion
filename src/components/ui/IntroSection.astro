@@ -1,7 +1,7 @@
 ---
 import DevOpsList from "@components/ui/DevOpsList.astro"
 import ServicesCard from "@components/ui/ServicesCard.astro";
-import { WebDev, Automation, ArrowCircle, FullStack, } from "@Icons"
+import { WebDev, Automation, ArrowCircle } from "@Icons"
 ---
 <div class="sticky-section">
 	<div class="sticky-image"></div>
@@ -24,11 +24,13 @@ import { WebDev, Automation, ArrowCircle, FullStack, } from "@Icons"
 	<!-- Service Points -->
 	<div class="grid md:grid-cols-12 gap-5 px-10 mt-20 md:grid-rows-2">
 		<div class="lg:col-start-1 lg:col-end-6 md:col-start-1 md:col-end-10">
-			<p class="text-xl">
+			<p class="text-xl text-base-100">
 				<span class="text-primary">Result focused</span>, evidence based digital strategies and products. Working with clients to develop evidence based digital strategies and build digital products that deliver results.
 			</p>
-			<p class="text-base-100 text-lg mt-5">
-				Working with clients to develop evidence based digital strategies and build digital products that deliver results.
+			<p class=" text-lg mt-5">
+				<span class="text-primary">ABOUT ME: </span>
+				<!-- Working with clients to develop evidence based digital strategies and build digital products that deliver results. -->
+				My name is Muhabbat Ali but you can also call me Mohib. I'm a full stack developer and DevOps engineer. I've been working as a freelancer for 5 years. During that time I've got a chance to with many organizations, individual clients and startups. 
 			</p>
 		</div>
 		<div class="md:row-start-2 lg:row-start-1 md:col-start-1 md:col-end-13 lg:col-start-7 lg:col-end-13 [&_svg]:h-7 [&_svg]:fill-primary [&_svg]:rotate-180">
@@ -104,41 +106,41 @@ import { WebDev, Automation, ArrowCircle, FullStack, } from "@Icons"
 		</div>
 
 		<!-- Web Development Cards -->
-		<div class="grid md:grid-cols-9 md:grid-rows-2 gap-4 [&_.container]:h-[420px] [&_.container]:rounded-2xl [&_.container]:bg-base-200 p-7 md:p-0 mt-12">
+		<div class="grid md:grid-cols-9 md:grid-rows-2 gap-4 [&_.container]:h-[460px] [&_.container]:rounded-2xl [&_.container]:bg-base-200 p-7 md:p-0 mt-12">
 			<div class="container md:col-span-4 md:col-start-2 relative">
-				<div class="h-[180px] web-card cover1 rounded-t-2xl">
-					<img class="absolute h-40 top-2 left-1/2 -translate-x-1/2 z-10" src="/astronaut.png"/>
+				<div class="h-[220px] web-card cover1 rounded-t-2xl">
+					<img class="absolute h-44 top-5 left-1/2 -translate-x-1/2 z-10" src="/web-development.jpg"/>
 				</div>
-				<div class="h-[200px] content text-white px-3 py-5">
+				<div class="h-[240px] content text-white px-3 py-5">
 					<h1 class="font-inter font-bold text-2xl">Full Stack Application</h1>
 					<p class="py-2 text-lg font-inter text-base-100">Contemporary, user-friendly applications with tailored features, crafted through a modern full-stack development approach, utilizing MERN Stack and Laravel technologies.</p>
 				</div>
 			</div>
 			<div class="container md:col-span-3 md:col-start-6 relative">
-				<div class="h-[180px] web-card cover2 rounded-t-2xl">
-					<img class="absolute h-40 top-2 left-1/2 -translate-x-1/2 z-10" src="/astronaut.png"/>
+				<div class="h-[220px] web-card cover2 rounded-t-2xl">
+					<img class="absolute h-44 top-5 left-1/2 -translate-x-1/2 z-10" src="/canvas-website.png"/>
 				</div>
-				<div class="h-[200px] content text-white px-3 py-5">
-					<h1 class="font-inter font-bold text-2xl">Single Page Application</h1>
-					<p class="py-2 text-lg font-inter text-base-100">Develop incredibly fast and secure single-page applications using advanced frameworks like React.js or Vue.js, coupled with efficient headless CMS platforms or any backend.</p>
+				<div class="h-[240px] content text-white px-3 py-5">
+					<h1 class="font-inter font-bold text-2xl">WebGL Websites</h1>
+					<p class="py-2 text-lg font-inter text-base-100">Craft high-performance and secure 2D/3D websites leveraging cutting-edge technologies using WebGL such as Fabric.js, Three.js, Babylon.js, Paper.js</p>
 				</div>
 			</div>
 			<div class="container md:col-span-3 md:col-start-2 relative md:row-start-2">
-				<div class="h-[180px] web-card cover3 rounded-t-2xl">
-					<img class="absolute h-40 top-2 left-1/2 -translate-x-1/2 z-10" src="/astronaut.png"/>
+				<div class="h-[220px] web-card cover3 rounded-t-2xl">
+					<img class="absolute h-44 top-5 left-1/2 -translate-x-1/2 z-10" src="/blog-website.jpg"/>
 				</div>
-				<div class="h-[200px] content text-white px-3 py-5">
+				<div class="h-[240px] content text-white px-3 py-5">
 					<h1 class="font-inter font-bold text-2xl">Static Website</h1>
 					<p class="py-2 text-lg font-inter text-base-100">Create exceptionally speedy and secure websites by employing headless content management systems such as Sanity and Strapi, combined with Astro or Gatsby.js.</p>
 				</div>
 			</div>
 			<div class="container md:col-span-4 md:col-start-5 relative md:row-start-2">
-				<div class="h-[180px] web-card cover4 rounded-t-2xl">
-					<img class="absolute h-40 top-2 left-1/2 -translate-x-1/2 z-10" src="/astronaut.png"/>
+				<div class="h-[220px] web-card cover4 rounded-t-2xl">
+					<img class="absolute h-44 top-5 left-1/2 -translate-x-1/2 z-10" src="/devops-diagram.png"/>
 				</div>
-				<div class="h-[200px] content text-white px-3 py-5">
-					<h1 class="font-inter font-bold text-2xl">2D/3D Canvas Website</h1>
-					<p class="py-2 text-lg font-inter text-base-100">Craft high-performance and secure 2D/3D websites leveraging cutting-edge technologies like Canvas or Three.js</p>
+				<div class="h-[240px] content text-white px-3 py-5">
+					<h1 class="font-inter font-bold text-2xl">Backend as a Service</h1>
+					<p class="py-2 text-lg font-inter text-base-100">Revolutionize Backend Operations: Unleash the Power of BaaS Services, including Firebase, Supabase, Appwrite, and AWS Amplify, for Scalable and Secure Cloud Solutions Tailored to Your Business.</p>
 				</div>
 			</div>
 	</div>
@@ -149,7 +151,9 @@ import { WebDev, Automation, ArrowCircle, FullStack, } from "@Icons"
 		<div class="[&_svg]:h-20 flex-c-c [&_svg]:fill-primary"> 
 			<Automation />
 			<h1 class="text-5xl text-center mt-2">DevOps Services</h1>
-			<h5 class="text-2xl text-center text-base-100 mt-4">This is some nice text about DevOps services, tools and Implementation</h5>
+			<h5 class="text-2xl text-center text-base-100 mt-4 px-5 md:px-10 lg:px-20">
+				Develop and Deliver your apps. Automate your infrastructure so that your product never goes down for maintianance.
+			</h5>
 		</div>
 		<div class="flex mt-14">
 			<!-- Test Points -->

@@ -13,6 +13,8 @@ import 'prismjs/components/prism-ruby'
 import 'prismjs/components/prism-sql'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-yaml'
+import 'prismjs/components/prism-javascript'
+import "prismjs/themes/prism-okaidia.min.css"
 import Caption from './Caption.astro'
 import * as interfaces from "@lib/interfaces"
 export interface Props {
@@ -80,8 +82,9 @@ const grammer =
     margin-bottom: 0.6rem;
   }
   .code > div {
-    background: rgb(247, 246, 243);
+    background: #0f172a;
     border-radius: var(--radius);
+    padding-top: 10px;
   }
   .code > div div {
     display: flex;
@@ -92,8 +95,8 @@ const grammer =
     width: 4rem;
     border: 0;
     border-radius: var(--radius);
-    background-color: rgba(227, 226, 224, 0.5);
-    color: var(--fg);
+    background-color:#0f172a;
+    /* color: var(--fg); */
     line-height: 1.2rem;
     cursor: pointer;
   }
@@ -121,9 +124,9 @@ const grammer =
     padding: 2rem;
   }
   .code pre code {
-    color: var(--fg);
+    /* color: var(--fg); */
     padding: 0;
-    background: rgb(247, 246, 243) !important;
+    background: #0f172a !important;
     border-radius: 0;
   }
 </style>

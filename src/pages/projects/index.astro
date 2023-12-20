@@ -9,7 +9,7 @@ import { projects } from "@/data/projects"
         projects.map((project, index) => 
             <div class={`flex flex-col ${index % 2==0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} lg:flex-row lg:h-[300px] mb-10 rounded-lg`}>
                 <div class="lg:w-1/2 h-[300px] flex-r-c">
-                    <img class="h-[230px]" src={`/public/${project.image}`} />
+                    <img class="h-[230px]" src={`/${project.image}`} />
                 </div>
                 <div class="lg:w-1/2 lg:h-[300px]">
                     <div class="flex-r-c [&_li]:py-2 [&_li]:text-base-100">
